@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Obsydia Retail</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script defer src="/js/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand" data-i18n="app.brand">Obsydia</div>
+      <div class="lang-switch" aria-label="Language selector" data-i18n-aria-label="language.ariaLabel">
+        <span class="lang-label" data-i18n="language.label">Language</span>
+        <button class="lang-btn" type="button" data-lang="en" data-i18n="language.en" aria-pressed="false">
+          EN
+        </button>
+        <button class="lang-btn" type="button" data-lang="es" data-i18n="language.es" aria-pressed="false">
+          ES
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero reveal" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Personal home servers</p>
+          <h1 data-i18n="hero.headline">Own your media. Keep it home.</h1>
+          <p class="lead" data-i18n="hero.subheadline">
+            Obsydia builds mini personal servers for streaming, photos, ebooks, and audiobooks, configured for your home in Puerto Rico.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#order" data-i18n="hero.cta">Start your build</a>
+            <span class="tag" data-i18n="hero.tag">ATH Móvil payments only</span>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img
+            src="/images/hero.png"
+            alt="Obsydia personal server on a desk"
+            data-i18n-alt="alt.hero"
+          />
+        </div>
+      </section>
+
+      <section class="services-section" id="services">
+        <div class="section-heading">
+          <h2 data-i18n="services.title">Choose your services</h2>
+          <p data-i18n="services.intro">Select any combination. We install and tune everything for you.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <img
+              src="/images/streaming.png"
+              alt="Streaming service interface on a dark screen"
+              data-i18n-alt="alt.streaming"
+            />
+            <h3 data-i18n="services.items.jellyfin.name">Jellyfin</h3>
+            <p data-i18n="services.items.jellyfin.desc">Movies and music streaming with no subscriptions.</p>
+          </article>
+          <article class="service-card reveal">
+            <img
+              src="/images/photos.png"
+              alt="Photo backup dashboard on a dark interface"
+              data-i18n-alt="alt.photos"
+            />
+            <h3 data-i18n="services.items.immich.name">Immich</h3>
+            <p data-i18n="services.items.immich.desc">Private photo backup that stays on your server.</p>
+          </article>
+          <article class="service-card reveal">
+            <img
+              src="/images/books.png"
+              alt="Digital library shelves on a dark interface"
+              data-i18n-alt="alt.books"
+            />
+            <h3 data-i18n="services.items.kavita.name">Kavita</h3>
+            <p data-i18n="services.items.kavita.desc">Ebooks and comics in a clean home library.</p>
+          </article>
+          <article class="service-card reveal">
+            <img
+              src="/images/audio.png"
+              alt="Audiobookshelf player on a dark interface"
+              data-i18n-alt="alt.audio"
+            />
+            <h3 data-i18n="services.items.audiobookshelf.name">Audiobookshelf</h3>
+            <p data-i18n="services.items.audiobookshelf.desc">Audiobooks and podcasts with offline access.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature split reveal" id="ownership">
+        <div class="feature-media">
+          <img
+            src="/images/ownership.png"
+            alt="Shield and storage icons symbolizing data ownership"
+            data-i18n-alt="alt.ownership"
+          />
+        </div>
+        <div class="feature-content">
+          <h2 data-i18n="ownership.title">Own your data</h2>
+          <p data-i18n="ownership.body">
+            No recurring fees. Your files live on hardware you control, not someone else's cloud.
+          </p>
+          <ul class="checklist">
+            <li data-i18n="ownership.points.0">No subscriptions or forced upgrades</li>
+            <li data-i18n="ownership.points.1">Private access for family and friends</li>
+            <li data-i18n="ownership.points.2">Stay in control of backups and sharing</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="feature split reverse reveal" id="built">
+        <div class="feature-media">
+          <img
+            src="/images/BuiltForYou.png"
+            alt="Custom-built server hardware on a workbench"
+            data-i18n-alt="alt.built"
+          />
+        </div>
+        <div class="feature-content">
+          <h2 data-i18n="built.title">Built by hand, configured for you</h2>
+          <p data-i18n="built.body">
+            Each server is assembled, tested, and tuned for your chosen apps. We keep it simple so it just works.
+          </p>
+          <ul class="checklist">
+            <li data-i18n="built.points.0">Custom build for your services</li>
+            <li data-i18n="built.points.1">Quiet, compact, and living-room friendly</li>
+            <li data-i18n="built.points.2">Setup guidance with local support</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="feature split reveal" id="pr-focus">
+        <div class="feature-media">
+          <img
+            src="/images/PuertoRicoHomeFocused.png"
+            alt="Puerto Rico home setup with a compact server"
+            data-i18n-alt="alt.prHome"
+          />
+        </div>
+        <div class="feature-content">
+          <h2 data-i18n="prFocus.title">Made for Puerto Rico homes</h2>
+          <p data-i18n="prFocus.body">
+            Local focus, local support, and a setup designed for family spaces.
+          </p>
+          <ul class="checklist">
+            <li data-i18n="prFocus.points.0">Support in English or Spanish</li>
+            <li data-i18n="prFocus.points.1">Optimized for home internet</li>
+            <li data-i18n="prFocus.points.2">Simple setup for everyday use</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="order-section reveal" id="order">
+        <div class="section-heading">
+          <h2 data-i18n="order.title">Order your server</h2>
+          <p data-i18n="order.subtitle">Tell us what you want and we'll confirm details by email.</p>
+        </div>
+        <form id="order-form" class="order-form">
+          <input type="hidden" name="language" id="language-field" value="en" />
+          <div class="form-grid">
+            <label>
+              <span data-i18n="form.fullName">Full Name</span>
+              <input type="text" name="fullName" autocomplete="name" required data-i18n-placeholder="order.placeholders.fullName" />
+            </label>
+            <label>
+              <span data-i18n="form.email">Email</span>
+              <input type="email" name="email" autocomplete="email" required data-i18n-placeholder="order.placeholders.email" />
+            </label>
+            <label>
+              <span data-i18n="form.phone">Phone (optional)</span>
+              <input type="tel" name="phone" autocomplete="tel" data-i18n-placeholder="order.placeholders.phone" />
+            </label>
+            <label>
+              <span data-i18n="form.location">Location</span>
+              <input type="text" name="location" autocomplete="address-level2" required data-i18n-placeholder="order.placeholders.location" />
+            </label>
+          </div>
+
+          <div class="form-section">
+            <span class="form-label" data-i18n="order.servicesLabel">Select services</span>
+            <div class="checkbox-grid">
+              <label class="checkbox">
+                <input type="checkbox" name="services" value="jellyfin" />
+                <span data-i18n="services.items.jellyfin.name">Jellyfin</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="services" value="immich" />
+                <span data-i18n="services.items.immich.name">Immich</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="services" value="kavita" />
+                <span data-i18n="services.items.kavita.name">Kavita</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="services" value="audiobookshelf" />
+                <span data-i18n="services.items.audiobookshelf.name">Audiobookshelf</span>
+              </label>
+            </div>
+          </div>
+
+          <label class="textarea">
+            <span data-i18n="form.notes">Notes</span>
+            <textarea name="notes" rows="4" data-i18n-placeholder="order.placeholders.notes"></textarea>
+          </label>
+
+          <p class="payment-note" data-i18n="order.paymentNote">ATH Móvil only: 939-413-2909</p>
+          <p class="disclaimer" data-i18n="order.disclaimer">We will email you to confirm details and timeline.</p>
+          <p class="form-status" id="form-status" role="status"></p>
+          <button class="btn primary" type="submit" data-i18n="order.submit">Submit order</button>
+        </form>
+      </section>
+
+      <section class="confirmation" id="confirmation" hidden>
+        <div class="confirmation-card">
+          <h2 data-i18n="confirmation.title">Order received</h2>
+          <p data-i18n="confirmation.message">
+            Please submit payment via ATH Móvil to 939-413-2909. Your build will begin once payment is confirmed.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer.note">Questions? We'll reach out by email after you submit.</p>
+    </footer>
+  </body>
+</html>

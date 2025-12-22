@@ -1,0 +1,146 @@
+{
+  "app": {
+    "title": "Obsydia Retail",
+    "brand": "Obsydia"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "EN",
+    "es": "ES",
+    "ariaLabel": "Selector de idioma",
+    "names": {
+      "en": "Inglés",
+      "es": "Español"
+    }
+  },
+  "hero": {
+    "eyebrow": "Servidores personales para el hogar",
+    "headline": "Sea dueño de sus medios. Manténgalos en casa.",
+    "subheadline": "Obsydia construye mini servidores personales para streaming, fotos, libros y audiolibros, configurados para su hogar en Puerto Rico.",
+    "cta": "Comenzar mi servidor",
+    "tag": "Pagos solo por ATH Móvil"
+  },
+  "services": {
+    "title": "Elija sus servicios",
+    "intro": "Seleccione cualquier combinación. Los instalamos y los ajustamos por usted.",
+    "items": {
+      "jellyfin": {
+        "name": "Jellyfin",
+        "desc": "Streaming de películas y música, sin suscripciones."
+      },
+      "immich": {
+        "name": "Immich",
+        "desc": "Respaldo privado de fotos que permanece en su servidor."
+      },
+      "kavita": {
+        "name": "Kavita",
+        "desc": "Ebooks y cómics en una biblioteca del hogar."
+      },
+      "audiobookshelf": {
+        "name": "Audiobookshelf",
+        "desc": "Audiolibros y podcasts con acceso sin conexión."
+      }
+    }
+  },
+  "ownership": {
+    "title": "Sea dueño de sus datos",
+    "body": "Sin cuotas recurrentes. Sus archivos viven en el hardware que usted controla, no en una nube ajena.",
+    "points": [
+      "Sin suscripciones ni cambios forzados",
+      "Acceso privado para familia y amistades",
+      "Control total de respaldos y compartidos"
+    ]
+  },
+  "built": {
+    "title": "Construido a mano, configurado para usted",
+    "body": "Cada servidor se ensambla, se prueba y se ajusta según sus servicios. Lo dejamos simple para que funcione desde el primer día.",
+    "points": [
+      "Construcción personalizada para sus servicios",
+      "Compacto, silencioso y listo para el hogar",
+      "Guía de configuración con soporte local"
+    ]
+  },
+  "prFocus": {
+    "title": "Pensado para hogares en Puerto Rico",
+    "body": "Enfoque local, soporte cercano y una configuración diseñada para espacios familiares.",
+    "points": [
+      "Soporte en español o inglés",
+      "Optimizado para internet residencial",
+      "Configuración simple para el día a día"
+    ]
+  },
+  "order": {
+    "title": "Ordene su servidor",
+    "subtitle": "Cuéntenos qué necesita y le confirmaremos los detalles por correo.",
+    "servicesLabel": "Seleccione servicios",
+    "notesLabel": "Notas",
+    "submit": "Enviar orden",
+    "submitting": "Enviando...",
+    "paymentNote": "Solo ATH Móvil: 939-413-2909",
+    "disclaimer": "Le escribiremos para confirmar detalles y calendario.",
+    "placeholders": {
+      "fullName": "Su nombre completo",
+      "email": "su@email.com",
+      "phone": "Opcional",
+      "location": "Ciudad, PR",
+      "notes": "Comparta preferencias, almacenamiento o preguntas"
+    }
+  },
+  "form": {
+    "fullName": "Nombre completo",
+    "email": "Correo electrónico",
+    "phone": "Teléfono (opcional)",
+    "location": "Ubicación",
+    "notes": "Notas"
+  },
+  "confirmation": {
+    "title": "Orden recibida",
+    "message": "Por favor realice el pago vía ATH Móvil al 939-413-2909. Su servidor comenzará a construirse una vez se confirme el pago."
+  },
+  "footer": {
+    "note": "¿Preguntas? Le escribiremos por correo luego de enviar su orden."
+  },
+  "alt": {
+    "hero": "Servidor personal de Obsydia sobre un escritorio",
+    "streaming": "Interfaz de streaming en una pantalla oscura",
+    "photos": "Panel de respaldo de fotos en una interfaz oscura",
+    "books": "Biblioteca digital en una interfaz oscura",
+    "audio": "Reproductor de Audiobookshelf en una interfaz oscura",
+    "ownership": "Iconos de escudo y almacenamiento que simbolizan propiedad de datos",
+    "built": "Hardware de servidor personalizado en un banco de trabajo",
+    "prHome": "Configuración de hogar en Puerto Rico con un servidor compacto"
+  },
+  "errors": {
+    "required": "Complete todos los campos requeridos.",
+    "email": "Ingrese un correo electrónico válido.",
+    "services": "Seleccione al menos un servicio.",
+    "notes": "Mantenga las notas en 1000 caracteres o menos.",
+    "length": "Acorte los datos ingresados.",
+    "server": "Ocurrió un error al enviar su orden. Inténtelo de nuevo.",
+    "network": "No se pudo conectar. Revise su conexión e inténtelo de nuevo."
+  },
+  "email": {
+    "customerSubject": "Su orden de servidor Obsydia",
+    "adminSubject": "Nueva orden de Obsydia Retail: {{name}}",
+    "intro": "Gracias por su orden. Este es su resumen:",
+    "adminIntro": "Se ha recibido una nueva orden.",
+    "summaryTitle": "Resumen de la orden",
+    "servicesTitle": "Servicios seleccionados",
+    "paymentTitle": "Instrucciones de pago",
+    "paymentInstructions": "Por favor realice el pago vía ATH Móvil al 939-413-2909. Su servidor comenzará a construirse una vez se confirme el pago.",
+    "nextSteps": "Nos comunicaremos si necesitamos información adicional.",
+    "noServices": "No se seleccionaron servicios.",
+    "noNotes": "No se indicaron notas.",
+    "notProvided": "No provisto",
+    "labels": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "location": "Ubicación",
+      "notes": "Notas",
+      "language": "Idioma",
+      "orderId": "ID de orden",
+      "timestamp": "Enviado"
+    }
+  }
+}

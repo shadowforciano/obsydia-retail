@@ -1,0 +1,146 @@
+{
+  "app": {
+    "title": "Obsydia Retail",
+    "brand": "Obsydia"
+  },
+  "language": {
+    "label": "Language",
+    "en": "EN",
+    "es": "ES",
+    "ariaLabel": "Language selector",
+    "names": {
+      "en": "English",
+      "es": "Spanish"
+    }
+  },
+  "hero": {
+    "eyebrow": "Personal home servers",
+    "headline": "Own your media. Keep it home.",
+    "subheadline": "Obsydia builds mini personal servers for streaming, photos, ebooks, and audiobooks, configured for your home in Puerto Rico.",
+    "cta": "Start your build",
+    "tag": "ATH Móvil payments only"
+  },
+  "services": {
+    "title": "Choose your services",
+    "intro": "Select any combination. We install and tune everything for you.",
+    "items": {
+      "jellyfin": {
+        "name": "Jellyfin",
+        "desc": "Movies and music streaming with no subscriptions."
+      },
+      "immich": {
+        "name": "Immich",
+        "desc": "Private photo backup that stays on your server."
+      },
+      "kavita": {
+        "name": "Kavita",
+        "desc": "Ebooks and comics in a clean home library."
+      },
+      "audiobookshelf": {
+        "name": "Audiobookshelf",
+        "desc": "Audiobooks and podcasts with offline access."
+      }
+    }
+  },
+  "ownership": {
+    "title": "Own your data",
+    "body": "No recurring fees. Your files live on hardware you control, not someone else's cloud.",
+    "points": [
+      "No subscriptions or forced upgrades",
+      "Private access for family and friends",
+      "Stay in control of backups and sharing"
+    ]
+  },
+  "built": {
+    "title": "Built by hand, configured for you",
+    "body": "Each server is assembled, tested, and tuned for your chosen apps. We keep it simple so it just works.",
+    "points": [
+      "Custom build for your services",
+      "Quiet, compact, and living-room friendly",
+      "Setup guidance with local support"
+    ]
+  },
+  "prFocus": {
+    "title": "Made for Puerto Rico homes",
+    "body": "Local focus, local support, and a setup designed for family spaces.",
+    "points": [
+      "Support in English or Spanish",
+      "Optimized for home internet",
+      "Simple setup for everyday use"
+    ]
+  },
+  "order": {
+    "title": "Order your server",
+    "subtitle": "Tell us what you want and we'll confirm details by email.",
+    "servicesLabel": "Select services",
+    "notesLabel": "Notes",
+    "submit": "Submit order",
+    "submitting": "Submitting...",
+    "paymentNote": "ATH Móvil only: 939-413-2909",
+    "disclaimer": "We will email you to confirm details and timeline.",
+    "placeholders": {
+      "fullName": "Your full name",
+      "email": "you@example.com",
+      "phone": "Optional",
+      "location": "City, PR",
+      "notes": "Share preferences, storage needs, or questions"
+    }
+  },
+  "form": {
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "location": "Location",
+    "notes": "Notes"
+  },
+  "confirmation": {
+    "title": "Order received",
+    "message": "Please submit payment via ATH Móvil to 939-413-2909. Your build will begin once payment is confirmed."
+  },
+  "footer": {
+    "note": "Questions? We'll reach out by email after you submit."
+  },
+  "alt": {
+    "hero": "Obsydia personal server on a desk",
+    "streaming": "Streaming service interface on a dark screen",
+    "photos": "Photo backup dashboard on a dark interface",
+    "books": "Digital library shelves on a dark interface",
+    "audio": "Audiobookshelf player on a dark interface",
+    "ownership": "Shield and storage icons symbolizing data ownership",
+    "built": "Custom-built server hardware on a workbench",
+    "prHome": "Puerto Rico home setup with a compact server"
+  },
+  "errors": {
+    "required": "Please fill out all required fields.",
+    "email": "Please enter a valid email address.",
+    "services": "Please select at least one service.",
+    "notes": "Please keep notes under 1000 characters.",
+    "length": "Please shorten one of the fields.",
+    "server": "Something went wrong while sending your order. Please try again.",
+    "network": "We could not connect. Please check your connection and try again."
+  },
+  "email": {
+    "customerSubject": "Your Obsydia server order",
+    "adminSubject": "New Obsydia Retail order from {{name}}",
+    "intro": "Thanks for your order! Here is your summary:",
+    "adminIntro": "A new order has been submitted.",
+    "summaryTitle": "Order summary",
+    "servicesTitle": "Selected services",
+    "paymentTitle": "Payment instructions",
+    "paymentInstructions": "Please submit payment via ATH Móvil to 939-413-2909. Your build will begin once payment is confirmed.",
+    "nextSteps": "We'll reach out if we need any additional details.",
+    "noServices": "No services selected.",
+    "noNotes": "No notes provided.",
+    "notProvided": "Not provided",
+    "labels": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "notes": "Notes",
+      "language": "Language",
+      "orderId": "Order ID",
+      "timestamp": "Submitted"
+    }
+  }
+}
