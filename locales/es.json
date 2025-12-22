@@ -76,7 +76,7 @@
     "notesLabel": "Notas",
     "submit": "Enviar orden",
     "submitting": "Enviando...",
-    "paymentNote": "Solo ATH Móvil: 939-413-2909",
+    "paymentNote": "Solo ATH Móvil. Las instrucciones de pago se muestran después de enviar.",
     "disclaimer": "Le escribiremos para confirmar detalles y calendario.",
     "placeholders": {
       "fullName": "Su nombre completo",

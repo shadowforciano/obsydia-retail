@@ -204,7 +204,9 @@
             <textarea name="notes" rows="4" data-i18n-placeholder="order.placeholders.notes"></textarea>
           </label>
 
-          <p class="payment-note" data-i18n="order.paymentNote">ATH Móvil only: 939-413-2909</p>
+          <p class="payment-note" data-i18n="order.paymentNote">
+            ATH Móvil only. Payment instructions appear after you submit.
+          </p>
           <p class="disclaimer" data-i18n="order.disclaimer">We will email you to confirm details and timeline.</p>
           <p class="form-status" id="form-status" role="status"></p>
           <button class="btn primary" type="submit" data-i18n="order.submit">Submit order</button>
@@ -213,9 +215,9 @@
 
       <section class="confirmation" id="confirmation" hidden>
         <div class="confirmation-card">
-          <h2 data-i18n="confirmation.title">Order received</h2>
-          <p data-i18n="confirmation.message">
-            Please submit payment via ATH Móvil to 939-413-2909. Your build will begin once payment is confirmed.
+          <h2 data-i18n="confirmation.title" data-i18n-defer="confirmation">Order received</h2>
+          <p data-i18n="confirmation.message" data-i18n-defer="confirmation">
+            Payment instructions will appear after submitting your order.
           </p>
         </div>
       </section>

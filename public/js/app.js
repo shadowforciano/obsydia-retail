@@ -19,6 +19,17 @@ function resolvePath(obj, path) {
   return path.split('.').reduce((acc, key) => (acc ? acc[key] : undefined), obj);
 }
 
+function shouldDeferElement(el) {
+  const group = el.dataset.i18nDefer;
+  if (!group) {
+    return false;
+  }
+  if (group === 'confirmation') {
+    return elements.confirmation && elements.confirmation.hidden;
+  }
+  return true;
+}
+
 async function loadTranslations(lang) {
   if (state.translations[lang]) {
     return state.translations[lang];
@@ -36,6 +47,9 @@ async function loadTranslations(lang) {
 
 function applyTranslations(t) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
+    if (shouldDeferElement(el)) {
+      return;
+    }
     const value = resolvePath(t, el.dataset.i18n);
     if (value) {
       el.textContent = value;
@@ -201,6 +215,7 @@ function setupOrderForm() {
 
       elements.orderSection.hidden = true;
       elements.confirmation.hidden = false;
+      applyTranslations(translations);
       elements.confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } catch (error) {
       elements.status.textContent = translations.errors.network;
