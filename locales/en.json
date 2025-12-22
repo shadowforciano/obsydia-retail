@@ -80,6 +80,7 @@
     "notesLabel": "Notes",
     "submit": "Submit order",
     "submitting": "Submitting...",
+    "estimateNote": "Estimate: new builds typically start around $140. BYOD (bring your own device) is welcome with at least 8 GB RAM and enough storage for the GB you expect to use. External drives can be added when supported.",
     "paymentNote": "ATH Móvil only. We will email a quote before any payment.",
     "success": "Thanks! Your order is in. Check your email for next steps.",
     "disclaimer": "We will email you to confirm details and timeline.",

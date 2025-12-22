@@ -366,6 +366,11 @@ textarea:focus {
   color: var(--accent-warm);
 }
 
+.estimate-note {
+  font-size: 0.95rem;
+  color: #c9d4f0;
+}
+
 .disclaimer {
   font-size: 0.95rem;
 }

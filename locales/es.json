@@ -80,6 +80,7 @@
     "notesLabel": "Notas",
     "submit": "Enviar orden",
     "submitting": "Enviando...",
+    "estimateNote": "Estimado: un servidor nuevo suele comenzar alrededor de $140. También aceptamos BYOD (traiga su propio equipo) con al menos 8 GB de RAM y suficiente almacenamiento para los GB que espera usar. Podemos añadir un disco externo si el servicio o la aplicación lo permite.",
     "paymentNote": "Solo ATH Móvil. Enviaremos una cotización antes de cualquier pago.",
     "success": "¡Gracias! Su orden fue enviada. Revise su correo para los próximos pasos.",
     "disclaimer": "Le escribiremos para confirmar detalles y calendario.",
