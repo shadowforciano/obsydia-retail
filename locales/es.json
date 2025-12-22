@@ -118,7 +118,7 @@
     "sections": {
       "services": {
         "title": "Servicios y estimados",
-        "body": "Obsydia construye mini servidores personalizados e instala los servicios que usted elija. Los estimados y las cotizaciones son informativos hasta que se confirmen por escrito."
+        "body": "Obsydia construye mini servidores personalizados e instala los servicios que usted elija. Los estimados y las cotizaciones son informativos hasta confirmación por escrito. El precio, el calendario y la disponibilidad pueden cambiar según el hardware y los requisitos."
       },
       "byod": {
         "title": "Traiga su propio equipo (BYOD)",
@@ -126,7 +126,15 @@
       },
       "data": {
         "title": "Datos y respaldos",
-        "body": "Usted es el único responsable de sus datos y respaldos. La pérdida de datos puede ocurrir por fallas de hardware, energía, errores de software o uso incorrecto."
+        "body": "Usted es el único responsable de sus datos y respaldos. La pérdida de datos puede ocurrir por fallas de hardware, energía, errores de software o uso incorrecto. Debe mantener respaldos independientes."
+      },
+      "thirdParty": {
+        "title": "Software y servicios de terceros",
+        "body": "Podemos usar o instalar software de terceros y de código abierto. Esos proveedores no están bajo el control de Obsydia y aplican sus términos y disponibilidad."
+      },
+      "security": {
+        "title": "Seguridad, red y entorno",
+        "body": "Usted es responsable de su red, energía, seguridad física y uso seguro del sistema. Obsydia no es responsable por interrupciones, problemas de ISP, fallas eléctricas, malware o accesos no autorizados."
       },
       "external": {
         "title": "Almacenamiento externo",
@@ -138,15 +146,27 @@
       },
       "liability": {
         "title": "Limitación de responsabilidad",
-        "body": "En la medida máxima permitida por la ley, Obsydia no es responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo pérdida de datos, ganancias o uso. La responsabilidad se limita a las cantidades pagadas por el servicio."
+        "body": "En la medida máxima permitida por la ley, Obsydia no es responsable por daños indirectos, incidentales, especiales, consecuentes, ejemplares o punitivos, incluyendo pérdida de datos, ganancias o uso, ya sea por contrato, agravio, negligencia o responsabilidad estricta. La responsabilidad se limita a las cantidades pagadas por el servicio que dio origen al reclamo."
+      },
+      "indemnity": {
+        "title": "Indemnización",
+        "body": "Usted acepta defender, indemnizar y mantener indemne a Obsydia por reclamaciones, daños, pérdidas, responsabilidades y gastos (incluyendo honorarios de abogados) que surjan de su uso de los servicios, su contenido o su violación de la ley."
       },
       "release": {
         "title": "Liberación y resolución de disputas",
-        "body": "Al usar nuestros servicios, usted acepta liberar y mantener indemne a Obsydia ante reclamaciones relacionadas con pérdida de datos, interrupciones del servicio o software de terceros, y acepta no iniciar acciones legales ni demandas colectivas contra Obsydia, en la medida máxima permitida por la ley. Por favor contáctenos primero para resolver cualquier situación."
+        "body": "Al usar nuestros servicios, usted acepta liberar y mantener indemne a Obsydia ante reclamaciones relacionadas con pérdida de datos, interrupciones del servicio, software de terceros o problemas del equipo, y acepta no iniciar acciones legales ni demandas colectivas contra Obsydia, en la medida máxima permitida por la ley. Por favor contáctenos primero para resolver cualquier situación."
+      },
+      "force": {
+        "title": "Fuerza mayor",
+        "body": "Obsydia no es responsable por retrasos o incumplimientos causados por eventos fuera de nuestro control razonable, incluyendo tormentas, apagones, problemas de suministro o actos del gobierno."
+      },
+      "changes": {
+        "title": "Cambios a estos términos",
+        "body": "Podemos actualizar estos términos en cualquier momento. El uso continuo del sitio o de los servicios constituye aceptación de los términos actualizados."
       },
       "law": {
         "title": "Ley aplicable",
-        "body": "Estos términos se rigen por las leyes de Puerto Rico."
+        "body": "Estos términos se rigen por las leyes de Puerto Rico y las leyes federales aplicables de Estados Unidos."
       }
     }
   },
@@ -181,7 +201,7 @@
     "paymentTitle": "Cotización y próximos pasos",
     "paymentInstructions": "Estamos revisando su solicitud y le enviaremos una cotización con el precio final e instrucciones de pago. Aún no se requiere pago.",
     "termsLabel": "Términos de servicio",
-    "termsLine": "Términos de servicio: {{termsUrl}}",
+    "termsLine": "Al enviar su orden, usted acepta nuestros Términos de servicio: {{termsUrl}}",
     "nextSteps": "Nos comunicaremos si necesitamos información adicional.",
     "noServices": "No se seleccionaron servicios.",
     "noNotes": "No se indicaron notas.",
@@ -210,7 +230,7 @@
     "notesLabel": "Notas",
     "outro": "Una vez se confirme el pago, comenzaremos la construcción y enviaremos el servidor a la dirección provista.",
     "termsLabel": "Términos de servicio",
-    "termsLine": "Términos de servicio: {{termsUrl}}",
+    "termsLine": "Al continuar, usted acepta nuestros Términos de servicio: {{termsUrl}}",
     "items": {
       "pc": "PC base",
       "jellyfin": "Streaming de películas y música",

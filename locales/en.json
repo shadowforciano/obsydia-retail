@@ -118,7 +118,7 @@
     "sections": {
       "services": {
         "title": "Services and estimates",
-        "body": "Obsydia builds custom mini servers and installs the services you choose. Estimates and quotes are informational until confirmed in writing."
+        "body": "Obsydia builds custom mini servers and installs the services you choose. Estimates and quotes are informational until confirmed in writing. Pricing, timelines, and availability may change based on hardware and requirements."
       },
       "byod": {
         "title": "Bring your own device (BYOD)",
@@ -126,7 +126,15 @@
       },
       "data": {
         "title": "Data and backups",
-        "body": "You are solely responsible for your data and backups. Data loss can occur due to hardware failure, power issues, software bugs, or user error."
+        "body": "You are solely responsible for your data and backups. Data loss can occur due to hardware failure, power issues, software bugs, or user error. You should maintain independent backups."
+      },
+      "thirdParty": {
+        "title": "Third-party software and services",
+        "body": "We may use or install third-party and open-source software. Those providers are not controlled by Obsydia and their terms and availability apply."
+      },
+      "security": {
+        "title": "Security, network, and environment",
+        "body": "You are responsible for your network, power, physical security, and safe use of the system. Obsydia is not responsible for outages, ISP issues, power events, malware, or unauthorized access."
       },
       "external": {
         "title": "External storage",
@@ -138,15 +146,27 @@
       },
       "liability": {
         "title": "Limitation of liability",
-        "body": "To the maximum extent permitted by law, Obsydia is not liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, profits, or use. Liability is limited to the amounts you paid for the service."
+        "body": "To the maximum extent permitted by law, Obsydia is not liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, including loss of data, profits, or use, whether in contract, tort, negligence, or strict liability. Liability is limited to the amounts you paid for the service that gave rise to the claim."
+      },
+      "indemnity": {
+        "title": "Indemnification",
+        "body": "You agree to defend, indemnify, and hold Obsydia harmless from claims, damages, losses, liabilities, and expenses (including attorney fees) arising from your use of the services, your content, or your violation of law."
       },
       "release": {
         "title": "Release and dispute resolution",
-        "body": "By using our services, you agree to release and hold Obsydia harmless from claims related to data loss, service interruptions, or third-party software, and you agree not to pursue legal action or class actions against Obsydia, to the maximum extent permitted by law. Please contact us first to resolve any concerns."
+        "body": "By using our services, you agree to release and hold Obsydia harmless from claims related to data loss, service interruptions, third-party software, or device issues, and you agree not to pursue legal action or class actions against Obsydia, to the maximum extent permitted by law. Please contact us first to resolve any concerns."
+      },
+      "force": {
+        "title": "Force majeure",
+        "body": "Obsydia is not responsible for delays or failures caused by events beyond our reasonable control, including storms, power outages, supply chain issues, or acts of government."
+      },
+      "changes": {
+        "title": "Changes to these terms",
+        "body": "We may update these terms from time to time. Continued use of the site or services constitutes acceptance of the updated terms."
       },
       "law": {
         "title": "Governing law",
-        "body": "These terms are governed by the laws of Puerto Rico."
+        "body": "These terms are governed by the laws of Puerto Rico and applicable federal laws of the United States."
       }
     }
   },
@@ -181,7 +201,7 @@
     "paymentTitle": "Quote and next steps",
     "paymentInstructions": "We are reviewing your request and will email a quote with final pricing and payment instructions. No payment is required yet.",
     "termsLabel": "Terms of Service",
-    "termsLine": "Terms of Service: {{termsUrl}}",
+    "termsLine": "By submitting your order, you agree to our Terms of Service: {{termsUrl}}",
     "nextSteps": "We'll reach out if we need any additional details.",
     "noServices": "No services selected.",
     "noNotes": "No notes provided.",
@@ -210,7 +230,7 @@
     "notesLabel": "Notes",
     "outro": "Once payment is confirmed, we will begin the build and ship the server to the address you provided.",
     "termsLabel": "Terms of Service",
-    "termsLine": "Terms of Service: {{termsUrl}}",
+    "termsLine": "By proceeding, you agree to our Terms of Service: {{termsUrl}}",
     "items": {
       "pc": "Base PC",
       "jellyfin": "Movie & Music Streaming",

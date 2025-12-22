@@ -85,6 +85,8 @@ async function verifyAdminPassword(input) {
 app.post('/order', async (req, res) => {
   const { order, errors } = parseOrder(req.body);
   const t = getLocale(order.language);
+  const host = req.get('host');
+  const baseUrl = host ? `${req.protocol}://${host}` : process.env.PUBLIC_BASE_URL;
 
   if (errors.length > 0) {
     const messageKey = errors[0];
@@ -108,7 +110,7 @@ app.post('/order', async (req, res) => {
     if (dbEnabled) {
       await createOrder(order);
     }
-    await sendOrderEmails(order);
+    await sendOrderEmails(order, { baseUrl });
     return res.json({
       ok: true,
       orderId: order.id,
@@ -197,7 +199,9 @@ app.post(`/${adminPath}/orders/:id/quote`, async (req, res) => {
   }
 
   try {
-    await sendQuoteEmail(order, quote);
+    const host = req.get('host');
+    const baseUrl = host ? `${req.protocol}://${host}` : process.env.PUBLIC_BASE_URL;
+    await sendQuoteEmail(order, quote, { baseUrl });
     await saveQuote(order.id, quote);
     const quoteDefaults = buildQuoteDefaults(quote);
     return res.send(

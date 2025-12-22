@@ -21,7 +21,7 @@ cp .env.example .env
 ```
 
 3) Set the following values in `.env`:
-- `PUBLIC_BASE_URL` (e.g. `https://server.obsydiapr.com`, used for email links)
+- `PUBLIC_BASE_URL` (e.g. `https://server.obsydiapr.com`, required for absolute email links)
 - `SMTP2GO_API_KEY`
 - `FROM_EMAIL` (must be verified in SMTP2GO)
 - `ADMIN_EMAILS` (comma-separated)
