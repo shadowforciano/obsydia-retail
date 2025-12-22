@@ -268,16 +268,18 @@ function parseQuotePayload(body) {
     { key: 'extra-storage', amount: extraStorage || 0 },
   ];
 
-  const otherAmount = parseAmount(body.otherAmount);
-  if (otherAmount === null) {
-    return { error: 'Invalid other item amount.', quote: {} };
-  }
-  const otherLabel = String(body.otherLabel || '').trim();
-  if (otherAmount && otherAmount > 0 && !otherLabel) {
-    return { error: 'Other item label is required.', quote: {} };
-  }
-  if (otherAmount && otherAmount > 0) {
-    items.push({ key: 'other', amount: otherAmount, label: otherLabel });
+  for (let index = 1; index <= 3; index += 1) {
+    const otherAmount = parseAmount(body[`otherAmount${index}`]);
+    if (otherAmount === null) {
+      return { error: 'Invalid other item amount.', quote: {} };
+    }
+    const otherLabel = String(body[`otherLabel${index}`] || '').trim();
+    if (otherAmount && otherAmount > 0 && !otherLabel) {
+      return { error: 'Other item label is required.', quote: {} };
+    }
+    if (otherAmount && otherAmount > 0) {
+      items.push({ key: 'other', amount: otherAmount, label: otherLabel });
+    }
   }
 
   const total = items.reduce((sum, item) => sum + (Number(item.amount) || 0), 0);
@@ -301,8 +303,7 @@ function buildQuoteDefaults(quote) {
     kavita: '',
     audiobookshelf: '',
     'extra-storage': '',
-    otherLabel: '',
-    otherAmount: '',
+    otherItems: [],
     notes: '',
   };
 
@@ -312,12 +313,15 @@ function buildQuoteDefaults(quote) {
 
   quote.items.forEach((item) => {
     if (item.key === 'other') {
-      defaults.otherLabel = item.label || '';
-      defaults.otherAmount = item.amount ?? '';
+      defaults.otherItems.push({ label: item.label || '', amount: item.amount ?? '' });
       return;
     }
     defaults[item.key] = item.amount ?? '';
   });
+
+  while (defaults.otherItems.length < 3) {
+    defaults.otherItems.push({ label: '', amount: '' });
+  }
 
   defaults.notes = quote.notes || '';
   return defaults;
