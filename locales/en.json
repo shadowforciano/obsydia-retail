@@ -25,19 +25,19 @@
     "intro": "Select any combination. We install and tune everything for you.",
     "items": {
       "jellyfin": {
-        "name": "Jellyfin",
+        "name": "Movie & Music Streaming",
         "desc": "Movies and music streaming with no subscriptions."
       },
       "immich": {
-        "name": "Immich",
+        "name": "Photo Storage & Backup",
         "desc": "Private photo backup that stays on your server."
       },
       "kavita": {
-        "name": "Kavita",
+        "name": "Ebooks & Comics Library",
         "desc": "Ebooks and comics in a clean home library."
       },
       "audiobookshelf": {
-        "name": "Audiobookshelf",
+        "name": "Audiobook & Podcast Streaming",
         "desc": "Audiobooks and podcasts with offline access."
       },
       "extra-storage": {
@@ -113,7 +113,7 @@
     "streaming": "Streaming service interface on a dark screen",
     "photos": "Photo backup dashboard on a dark interface",
     "books": "Digital library shelves on a dark interface",
-    "audio": "Audiobookshelf player on a dark interface",
+    "audio": "Audiobook player on a dark interface",
     "ownership": "Shield and storage icons symbolizing data ownership",
     "built": "Custom-built server hardware on a workbench",
     "prHome": "Puerto Rico home setup with a compact server"
@@ -167,10 +167,10 @@
     "outro": "Once payment is confirmed, we will begin the build and ship the server to the address you provided.",
     "items": {
       "pc": "Base PC",
-      "jellyfin": "Jellyfin",
-      "immich": "Immich",
-      "kavita": "Kavita",
-      "audiobookshelf": "Audiobookshelf",
+      "jellyfin": "Movie & Music Streaming",
+      "immich": "Photo Storage & Backup",
+      "kavita": "Ebooks & Comics Library",
+      "audiobookshelf": "Audiobook & Podcast Streaming",
       "extra-storage": "Extra Storage (External Drive)",
       "other": "Other"
     }

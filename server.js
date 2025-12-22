@@ -252,19 +252,19 @@ function parseQuotePayload(body) {
 
   const jellyfin = parseAmount(body.jellyfin);
   if (jellyfin === null) {
-    return { error: 'Invalid Jellyfin price.', quote: {} };
+    return { error: 'Invalid Movie & Music Streaming price.', quote: {} };
   }
   const immich = parseAmount(body.immich);
   if (immich === null) {
-    return { error: 'Invalid Immich price.', quote: {} };
+    return { error: 'Invalid Photo Storage & Backup price.', quote: {} };
   }
   const kavita = parseAmount(body.kavita);
   if (kavita === null) {
-    return { error: 'Invalid Kavita price.', quote: {} };
+    return { error: 'Invalid Ebooks & Comics Library price.', quote: {} };
   }
   const audiobookshelf = parseAmount(body.audiobookshelf);
   if (audiobookshelf === null) {
-    return { error: 'Invalid Audiobookshelf price.', quote: {} };
+    return { error: 'Invalid Audiobook & Podcast Streaming price.', quote: {} };
   }
   const extraStorage = parseAmount(body['extra-storage']);
   if (extraStorage === null) {

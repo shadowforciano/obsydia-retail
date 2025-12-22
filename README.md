@@ -1,6 +1,6 @@
 # Obsydia Retail
 
-Production-ready ordering site for custom-built mini personal servers (Jellyfin, Immich, Kavita, Audiobookshelf). The frontend is a minimal dark UI with bilingual support, and the backend sends language-aware emails via SMTP2GO API.
+Production-ready ordering site for custom-built mini personal servers (movie/music streaming, photo storage, ebooks/comics, audiobooks/podcasts). The frontend is a minimal dark UI with bilingual support, and the backend sends language-aware emails via SMTP2GO API.
 
 ## Features
 - English and Spanish (Puerto Rico friendly) UI with persistent language selector

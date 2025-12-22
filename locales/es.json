@@ -25,19 +25,19 @@
     "intro": "Seleccione cualquier combinación. Los instalamos y los ajustamos por usted.",
     "items": {
       "jellyfin": {
-        "name": "Jellyfin",
+        "name": "Streaming de películas y música",
         "desc": "Streaming de películas y música, sin suscripciones."
       },
       "immich": {
-        "name": "Immich",
+        "name": "Almacenamiento y respaldo de fotos",
         "desc": "Respaldo privado de fotos que permanece en su servidor."
       },
       "kavita": {
-        "name": "Kavita",
+        "name": "Biblioteca de ebooks y cómics",
         "desc": "Ebooks y cómics en una biblioteca del hogar."
       },
       "audiobookshelf": {
-        "name": "Audiobookshelf",
+        "name": "Streaming de audiolibros y podcasts",
         "desc": "Audiolibros y podcasts con acceso sin conexión."
       },
       "extra-storage": {
@@ -113,7 +113,7 @@
     "streaming": "Interfaz de streaming en una pantalla oscura",
     "photos": "Panel de respaldo de fotos en una interfaz oscura",
     "books": "Biblioteca digital en una interfaz oscura",
-    "audio": "Reproductor de Audiobookshelf en una interfaz oscura",
+    "audio": "Reproductor de audiolibros en una interfaz oscura",
     "ownership": "Iconos de escudo y almacenamiento que simbolizan propiedad de datos",
     "built": "Hardware de servidor personalizado en un banco de trabajo",
     "prHome": "Configuración de hogar en Puerto Rico con un servidor compacto"
@@ -167,10 +167,10 @@
     "outro": "Una vez se confirme el pago, comenzaremos la construcción y enviaremos el servidor a la dirección provista.",
     "items": {
       "pc": "PC base",
-      "jellyfin": "Jellyfin",
-      "immich": "Immich",
-      "kavita": "Kavita",
-      "audiobookshelf": "Audiobookshelf",
+      "jellyfin": "Streaming de películas y música",
+      "immich": "Almacenamiento y respaldo de fotos",
+      "kavita": "Biblioteca de ebooks y cómics",
+      "audiobookshelf": "Streaming de audiolibros y podcasts",
       "extra-storage": "Almacenamiento extra (disco externo)",
       "other": "Otro"
     }
