@@ -153,5 +153,25 @@
       "orderId": "ID de orden",
       "timestamp": "Enviado"
     }
+  },
+  "quote": {
+    "subject": "Cotización de Obsydia para la orden {{orderId}}",
+    "intro": "Aquí está su cotización para su servidor personalizado.",
+    "itemsTitle": "Precio detallado",
+    "totalLabel": "Total",
+    "paymentTitle": "Instrucciones de pago",
+    "paymentInstructions": "Por favor realice el pago vía ATH Móvil al {{paymentNumber}} e incluya su ID de orden {{orderId}} en la descripción del pago.",
+    "orderIdLabel": "ID de orden",
+    "notesLabel": "Notas",
+    "outro": "Una vez se confirme el pago, comenzaremos la construcción.",
+    "items": {
+      "pc": "PC base",
+      "jellyfin": "Jellyfin",
+      "immich": "Immich",
+      "kavita": "Kavita",
+      "audiobookshelf": "Audiobookshelf",
+      "extra-storage": "Almacenamiento extra (disco externo)",
+      "other": "Otro"
+    }
   }
 }

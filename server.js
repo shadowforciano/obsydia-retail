@@ -1,19 +1,81 @@
 require('dotenv').config();
 
 const express = require('express');
+const session = require('express-session');
+const bcrypt = require('bcryptjs');
+const PgSession = require('connect-pg-simple')(session);
 const path = require('path');
 const { parseOrder } = require('./lib/order');
-const { sendOrderEmails } = require('./lib/email');
+const { sendOrderEmails, sendQuoteEmail } = require('./lib/email');
 const { getLocale } = require('./lib/locales');
+const { isDbEnabled, initDb, createOrder, listOrders, getOrderById, saveQuote, getPool } = require('./lib/db');
+const { renderLogin, renderOrders, renderOrderDetail } = require('./lib/adminViews');
 
 const app = express();
+const adminPath = process.env.ADMIN_PATH || 'admin';
+const adminUsername = process.env.ADMIN_USERNAME || 'obsydia';
+const adminPassword = process.env.ADMIN_PASSWORD;
+const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH;
+const sessionSecret = process.env.SESSION_SECRET || 'obsydia-session-secret';
+const quoteCurrency = process.env.QUOTE_CURRENCY || 'USD';
+const dbEnabled = isDbEnabled();
+
+if (!process.env.SESSION_SECRET) {
+  console.warn('SESSION_SECRET is not set. Using a fallback value.');
+}
+
+if (dbEnabled) {
+  initDb().catch((error) => {
+    console.error('Database initialization failed:', error);
+  });
+}
 
 app.disable('x-powered-by');
+app.set('trust proxy', 1);
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true }));
 
+const sessionConfig = {
+  secret: sessionSecret,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,
+    sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',
+  },
+};
+
+if (dbEnabled) {
+  sessionConfig.store = new PgSession({
+    pool: getPool(),
+    createTableIfMissing: true,
+  });
+}
+
+app.use(session(sessionConfig));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/locales', express.static(path.join(__dirname, 'locales')));
+
+app.use(`/${adminPath}`, (req, res, next) => {
+  res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+  next();
+});
+
+function isAuthed(req) {
+  return Boolean(req.session && req.session.isAdmin);
+}
+
+async function verifyAdminPassword(input) {
+  if (adminPasswordHash) {
+    return bcrypt.compare(input, adminPasswordHash);
+  }
+  if (adminPassword) {
+    return input === adminPassword;
+  }
+  return false;
+}
 
 app.post('/order', async (req, res) => {
   const { order, errors } = parseOrder(req.body);
@@ -38,6 +100,9 @@ app.post('/order', async (req, res) => {
   });
 
   try {
+    if (dbEnabled) {
+      await createOrder(order);
+    }
     await sendOrderEmails(order);
     return res.json({
       ok: true,
@@ -49,6 +114,212 @@ app.post('/order', async (req, res) => {
     return res.status(500).json({ ok: false, message: t.errors.server });
   }
 });
+
+app.get(`/${adminPath}`, async (req, res) => {
+  if (!isAuthed(req)) {
+    const message =
+      adminPassword || adminPasswordHash
+        ? undefined
+        : 'Admin credentials are not configured.';
+    return res.send(renderLogin({ adminPath, message }));
+  }
+
+  const orders = dbEnabled ? await listOrders() : [];
+  return res.send(renderOrders({ orders, adminPath, dbEnabled }));
+});
+
+app.post(`/${adminPath}/login`, async (req, res) => {
+  const username = String(req.body.username || '').trim();
+  const password = String(req.body.password || '');
+
+  if (!adminPassword && !adminPasswordHash) {
+    return res.send(renderLogin({ adminPath, message: 'Admin credentials are not configured.' }));
+  }
+
+  if (!username || !password) {
+    return res.send(renderLogin({ adminPath, message: 'Missing credentials.' }));
+  }
+
+  if (username !== adminUsername) {
+    return res.send(renderLogin({ adminPath, message: 'Invalid credentials.' }));
+  }
+
+  const isValid = await verifyAdminPassword(password);
+  if (!isValid) {
+    return res.send(renderLogin({ adminPath, message: 'Invalid credentials.' }));
+  }
+
+  req.session.isAdmin = true;
+  return res.redirect(`/${adminPath}`);
+});
+
+app.post(`/${adminPath}/logout`, (req, res) => {
+  req.session.destroy(() => {
+    res.redirect(`/${adminPath}`);
+  });
+});
+
+app.get(`/${adminPath}/orders/:id`, async (req, res) => {
+  if (!isAuthed(req)) {
+    return res.redirect(`/${adminPath}`);
+  }
+
+  const order = await getOrderById(req.params.id);
+  if (!order) {
+    return res.send(renderOrderDetail({ order: null, adminPath, message: 'Order not found.' }));
+  }
+
+  const quoteDefaults = buildQuoteDefaults(order.quote);
+  return res.send(renderOrderDetail({ order, adminPath, quoteDefaults }));
+});
+
+app.post(`/${adminPath}/orders/:id/quote`, async (req, res) => {
+  if (!isAuthed(req)) {
+    return res.redirect(`/${adminPath}`);
+  }
+
+  const order = await getOrderById(req.params.id);
+  if (!order) {
+    return res.send(renderOrderDetail({ order: null, adminPath, message: 'Order not found.' }));
+  }
+
+  const { quote, error } = parseQuotePayload(req.body);
+  if (error) {
+    const quoteDefaults = buildQuoteDefaults(quote);
+    return res.send(
+      renderOrderDetail({ order, adminPath, quoteDefaults, message: error, messageType: 'error' })
+    );
+  }
+
+  try {
+    await sendQuoteEmail(order, quote);
+    await saveQuote(order.id, quote);
+    const quoteDefaults = buildQuoteDefaults(quote);
+    return res.send(
+      renderOrderDetail({
+        order,
+        adminPath,
+        quoteDefaults,
+        message: 'Quote sent successfully.',
+        messageType: 'success',
+      })
+    );
+  } catch (error) {
+    console.error('Quote email failed:', error.details || error);
+    const quoteDefaults = buildQuoteDefaults(quote);
+    return res.send(
+      renderOrderDetail({
+        order,
+        adminPath,
+        quoteDefaults,
+        message: 'Unable to send quote. Check your email settings.',
+        messageType: 'error',
+      })
+    );
+  }
+});
+
+function parseAmount(value) {
+  if (value === undefined || value === null || value === '') {
+    return 0;
+  }
+  const parsed = Number(value);
+  if (Number.isNaN(parsed) || parsed < 0) {
+    return null;
+  }
+  return Math.round(parsed * 100) / 100;
+}
+
+function parseQuotePayload(body) {
+  const pc = parseAmount(body.pc);
+  if (pc === null || pc <= 0) {
+    return { error: 'Base PC price is required.', quote: {} };
+  }
+
+  const jellyfin = parseAmount(body.jellyfin);
+  if (jellyfin === null) {
+    return { error: 'Invalid Jellyfin price.', quote: {} };
+  }
+  const immich = parseAmount(body.immich);
+  if (immich === null) {
+    return { error: 'Invalid Immich price.', quote: {} };
+  }
+  const kavita = parseAmount(body.kavita);
+  if (kavita === null) {
+    return { error: 'Invalid Kavita price.', quote: {} };
+  }
+  const audiobookshelf = parseAmount(body.audiobookshelf);
+  if (audiobookshelf === null) {
+    return { error: 'Invalid Audiobookshelf price.', quote: {} };
+  }
+  const extraStorage = parseAmount(body['extra-storage']);
+  if (extraStorage === null) {
+    return { error: 'Invalid extra storage price.', quote: {} };
+  }
+
+  const items = [
+    { key: 'pc', amount: pc },
+    { key: 'jellyfin', amount: jellyfin || 0 },
+    { key: 'immich', amount: immich || 0 },
+    { key: 'kavita', amount: kavita || 0 },
+    { key: 'audiobookshelf', amount: audiobookshelf || 0 },
+    { key: 'extra-storage', amount: extraStorage || 0 },
+  ];
+
+  const otherAmount = parseAmount(body.otherAmount);
+  if (otherAmount === null) {
+    return { error: 'Invalid other item amount.', quote: {} };
+  }
+  const otherLabel = String(body.otherLabel || '').trim();
+  if (otherAmount && otherAmount > 0 && !otherLabel) {
+    return { error: 'Other item label is required.', quote: {} };
+  }
+  if (otherAmount && otherAmount > 0) {
+    items.push({ key: 'other', amount: otherAmount, label: otherLabel });
+  }
+
+  const total = items.reduce((sum, item) => sum + (Number(item.amount) || 0), 0);
+  const notes = String(body.quoteNotes || '').trim();
+
+  return {
+    quote: {
+      currency: quoteCurrency,
+      items,
+      total: Math.round(total * 100) / 100,
+      notes,
+    },
+  };
+}
+
+function buildQuoteDefaults(quote) {
+  const defaults = {
+    pc: '',
+    jellyfin: '',
+    immich: '',
+    kavita: '',
+    audiobookshelf: '',
+    'extra-storage': '',
+    otherLabel: '',
+    otherAmount: '',
+    notes: '',
+  };
+
+  if (!quote || !Array.isArray(quote.items)) {
+    return defaults;
+  }
+
+  quote.items.forEach((item) => {
+    if (item.key === 'other') {
+      defaults.otherLabel = item.label || '';
+      defaults.otherAmount = item.amount ?? '';
+      return;
+    }
+    defaults[item.key] = item.amount ?? '';
+  });
+
+  defaults.notes = quote.notes || '';
+  return defaults;
+}
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

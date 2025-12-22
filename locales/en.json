@@ -153,5 +153,25 @@
       "orderId": "Order ID",
       "timestamp": "Submitted"
     }
+  },
+  "quote": {
+    "subject": "Obsydia quote for order {{orderId}}",
+    "intro": "Here is your quote for your custom server.",
+    "itemsTitle": "Itemized pricing",
+    "totalLabel": "Total",
+    "paymentTitle": "Payment instructions",
+    "paymentInstructions": "Please submit payment via ATH Móvil to {{paymentNumber}} and include your order ID {{orderId}} in the payment description.",
+    "orderIdLabel": "Order ID",
+    "notesLabel": "Notes",
+    "outro": "Once payment is confirmed, we will begin the build.",
+    "items": {
+      "pc": "Base PC",
+      "jellyfin": "Jellyfin",
+      "immich": "Immich",
+      "kavita": "Kavita",
+      "audiobookshelf": "Audiobookshelf",
+      "extra-storage": "Extra Storage (External Drive)",
+      "other": "Other"
+    }
   }
 }
