@@ -133,7 +133,7 @@
     "summaryTitle": "Order summary",
     "servicesTitle": "Selected services",
     "paymentTitle": "Payment instructions",
-    "paymentInstructions": "Please submit payment via ATH Móvil to {{paymentNumber}}. Your build will begin once payment is confirmed.",
+    "paymentInstructions": "Please submit payment via ATH Móvil to {{paymentNumber}} and include your order ID {{orderId}} in the payment description. Your build will begin once payment is confirmed.",
     "nextSteps": "We'll reach out if we need any additional details.",
     "noServices": "No services selected.",
     "noNotes": "No notes provided.",

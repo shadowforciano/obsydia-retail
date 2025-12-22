@@ -133,7 +133,7 @@
     "summaryTitle": "Resumen de la orden",
     "servicesTitle": "Servicios seleccionados",
     "paymentTitle": "Instrucciones de pago",
-    "paymentInstructions": "Por favor realice el pago vía ATH Móvil al {{paymentNumber}}. Su servidor comenzará a construirse una vez se confirme el pago.",
+    "paymentInstructions": "Por favor realice el pago vía ATH Móvil al {{paymentNumber}} e incluya su ID de orden {{orderId}} en la descripción del pago. Su servidor comenzará a construirse una vez se confirme el pago.",
     "nextSteps": "Nos comunicaremos si necesitamos información adicional.",
     "noServices": "No se seleccionaron servicios.",
     "noNotes": "No se indicaron notas.",
