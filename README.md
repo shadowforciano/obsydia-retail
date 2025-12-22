@@ -23,6 +23,7 @@ cp .env.example .env
 - `SMTP2GO_API_KEY`
 - `FROM_EMAIL` (must be verified in SMTP2GO)
 - `ADMIN_EMAILS` (comma-separated)
+- `ATH_MOBILE_NUMBER`
 
 4) Run the app:
 ```bash
@@ -37,6 +38,7 @@ The server listens on `PORT` (defaults to 3000).
   - `SMTP2GO_API_KEY`
   - `FROM_EMAIL`
   - `ADMIN_EMAILS`
+  - `ATH_MOBILE_NUMBER`
 - Railway automatically provides `PORT`.
 
 ## Language Additions

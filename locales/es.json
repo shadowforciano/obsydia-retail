@@ -95,7 +95,8 @@
   },
   "confirmation": {
     "title": "Orden recibida",
-    "message": "Por favor realice el pago vía ATH Móvil al 939-413-2909. Su servidor comenzará a construirse una vez se confirme el pago."
+    "message": "Las instrucciones de pago aparecerán luego de enviar su orden.",
+    "paymentMessage": "Por favor realice el pago vía ATH Móvil al {{paymentNumber}}. Su servidor comenzará a construirse una vez se confirme el pago."
   },
   "footer": {
     "note": "¿Preguntas? Le escribiremos por correo luego de enviar su orden."
@@ -127,7 +128,7 @@
     "summaryTitle": "Resumen de la orden",
     "servicesTitle": "Servicios seleccionados",
     "paymentTitle": "Instrucciones de pago",
-    "paymentInstructions": "Por favor realice el pago vía ATH Móvil al 939-413-2909. Su servidor comenzará a construirse una vez se confirme el pago.",
+    "paymentInstructions": "Por favor realice el pago vía ATH Móvil al {{paymentNumber}}. Su servidor comenzará a construirse una vez se confirme el pago.",
     "nextSteps": "Nos comunicaremos si necesitamos información adicional.",
     "noServices": "No se seleccionaron servicios.",
     "noNotes": "No se indicaron notas.",

@@ -1,8 +1,11 @@
+document.documentElement.classList.add('js');
+
 const supportedLanguages = ['en', 'es'];
 const state = {
   lang: 'en',
   translations: {},
   currentTranslations: null,
+  confirmationMessage: '',
 };
 
 const elements = {
@@ -11,6 +14,7 @@ const elements = {
   orderForm: document.getElementById('order-form'),
   orderSection: document.getElementById('order'),
   confirmation: document.getElementById('confirmation'),
+  confirmationMessage: document.getElementById('confirmation-message'),
   status: document.getElementById('form-status'),
   submitButton: document.querySelector('#order-form button[type="submit"]'),
 };
@@ -48,6 +52,10 @@ async function loadTranslations(lang) {
 function applyTranslations(t) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     if (shouldDeferElement(el)) {
+      return;
+    }
+    if (el.dataset.i18n === 'confirmation.message' && state.confirmationMessage) {
+      el.textContent = state.confirmationMessage;
       return;
     }
     const value = resolvePath(t, el.dataset.i18n);
@@ -213,6 +221,11 @@ function setupOrderForm() {
         elements.languageField.value = state.lang;
       }
 
+      state.confirmationMessage =
+        result.message || resolvePath(translations, 'confirmation.message') || '';
+      if (elements.confirmationMessage && state.confirmationMessage) {
+        elements.confirmationMessage.textContent = state.confirmationMessage;
+      }
       elements.orderSection.hidden = true;
       elements.confirmation.hidden = false;
       applyTranslations(translations);

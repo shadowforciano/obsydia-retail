@@ -95,7 +95,8 @@
   },
   "confirmation": {
     "title": "Order received",
-    "message": "Please submit payment via ATH Móvil to 939-413-2909. Your build will begin once payment is confirmed."
+    "message": "Payment instructions will appear after submitting your order.",
+    "paymentMessage": "Please submit payment via ATH Móvil to {{paymentNumber}}. Your build will begin once payment is confirmed."
   },
   "footer": {
     "note": "Questions? We'll reach out by email after you submit."
@@ -127,7 +128,7 @@
     "summaryTitle": "Order summary",
     "servicesTitle": "Selected services",
     "paymentTitle": "Payment instructions",
-    "paymentInstructions": "Please submit payment via ATH Móvil to 939-413-2909. Your build will begin once payment is confirmed.",
+    "paymentInstructions": "Please submit payment via ATH Móvil to {{paymentNumber}}. Your build will begin once payment is confirmed.",
     "nextSteps": "We'll reach out if we need any additional details.",
     "noServices": "No services selected.",
     "noNotes": "No notes provided.",

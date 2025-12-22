@@ -5,6 +5,7 @@ const path = require('path');
 const { parseOrder } = require('./lib/order');
 const { sendOrderEmails } = require('./lib/email');
 const { getLocale } = require('./lib/locales');
+const { applyPaymentNumber } = require('./lib/payments');
 
 const app = express();
 
@@ -37,17 +38,19 @@ app.post('/order', async (req, res) => {
   });
 
   try {
+    const confirmationMessage = applyPaymentNumber(
+      t.confirmation.paymentMessage || t.confirmation.message
+    );
     await sendOrderEmails(order);
+    return res.json({
+      ok: true,
+      orderId: order.id,
+      message: confirmationMessage,
+    });
   } catch (error) {
-    console.error('Email send failed:', error);
+    console.error('Order processing failed:', error);
     return res.status(500).json({ ok: false, message: t.errors.server });
   }
-
-  return res.json({
-    ok: true,
-    orderId: order.id,
-    message: t.confirmation.message,
-  });
 });
 
 const PORT = process.env.PORT || 3000;
