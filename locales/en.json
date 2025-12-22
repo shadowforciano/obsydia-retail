@@ -82,7 +82,7 @@
     "placeholders": {
       "fullName": "Your full name",
       "email": "you@example.com",
-      "phone": "Optional",
+      "phone": "939-555-1234",
       "location": "City, PR",
       "notes": "Share preferences, storage needs, or questions"
     }
@@ -90,7 +90,7 @@
   "form": {
     "fullName": "Full Name",
     "email": "Email",
-    "phone": "Phone (optional)",
+    "phone": "Phone",
     "location": "Location",
     "notes": "Notes"
   },
@@ -116,6 +116,7 @@
     "required": "Please fill out all required fields.",
     "email": "Please enter a valid email address.",
     "services": "Please select at least one service.",
+    "phone": "Please enter a phone number.",
     "notes": "Please keep notes under 1000 characters.",
     "length": "Please shorten one of the fields.",
     "server": "Something went wrong while sending your order. Please try again.",

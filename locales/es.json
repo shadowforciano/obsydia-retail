@@ -82,7 +82,7 @@
     "placeholders": {
       "fullName": "Su nombre completo",
       "email": "su@email.com",
-      "phone": "Opcional",
+      "phone": "939-555-1234",
       "location": "Ciudad, PR",
       "notes": "Comparta preferencias, almacenamiento o preguntas"
     }
@@ -90,7 +90,7 @@
   "form": {
     "fullName": "Nombre completo",
     "email": "Correo electrónico",
-    "phone": "Teléfono (opcional)",
+    "phone": "Teléfono",
     "location": "Ubicación",
     "notes": "Notas"
   },
@@ -116,6 +116,7 @@
     "required": "Complete todos los campos requeridos.",
     "email": "Ingrese un correo electrónico válido.",
     "services": "Seleccione al menos un servicio.",
+    "phone": "Ingrese un número de teléfono.",
     "notes": "Mantenga las notas en 1000 caracteres o menos.",
     "length": "Acorte los datos ingresados.",
     "server": "Ocurrió un error al enviar su orden. Inténtelo de nuevo.",
