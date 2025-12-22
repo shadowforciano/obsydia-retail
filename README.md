@@ -30,7 +30,7 @@ cp .env.example .env
 - `SESSION_SECRET`
 - `ADMIN_USERNAME`
 - `ADMIN_PASSWORD` (or `ADMIN_PASSWORD_HASH`)
-- `ADMIN_PATH` (optional, defaults to `admin`)
+- `ADMIN_PATH` (optional, defaults to `admin`, do not include leading `/`)
 - `QUOTE_CURRENCY` (optional, defaults to `USD`)
 
 4) Run the app:
@@ -52,7 +52,7 @@ The server listens on `PORT` (defaults to 3000).
   - `SESSION_SECRET`
   - `ADMIN_USERNAME`
   - `ADMIN_PASSWORD` or `ADMIN_PASSWORD_HASH`
-  - `ADMIN_PATH` (optional)
+  - `ADMIN_PATH` (optional, no leading `/`)
   - `QUOTE_CURRENCY` (optional)
 - Railway automatically provides `PORT`.
 

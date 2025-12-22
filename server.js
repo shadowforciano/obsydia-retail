@@ -12,7 +12,8 @@ const { isDbEnabled, initDb, createOrder, listOrders, getOrderById, saveQuote, g
 const { renderLogin, renderOrders, renderOrderDetail } = require('./lib/adminViews');
 
 const app = express();
-const adminPath = process.env.ADMIN_PATH || 'admin';
+const rawAdminPath = process.env.ADMIN_PATH || 'admin';
+const adminPath = rawAdminPath.replace(/^\/+|\/+$/g, '') || 'admin';
 const adminUsername = process.env.ADMIN_USERNAME || 'obsydia';
 const adminPassword = process.env.ADMIN_PASSWORD;
 const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH;
