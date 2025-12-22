@@ -39,6 +39,10 @@
       "audiobookshelf": {
         "name": "Audiobookshelf",
         "desc": "Audiobooks and podcasts with offline access."
+      },
+      "extra-storage": {
+        "name": "Extra Storage (External Drive)",
+        "desc": "Add an external hard drive for expanded storage."
       }
     }
   },

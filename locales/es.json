@@ -39,6 +39,10 @@
       "audiobookshelf": {
         "name": "Audiobookshelf",
         "desc": "Audiolibros y podcasts con acceso sin conexión."
+      },
+      "extra-storage": {
+        "name": "Almacenamiento extra (disco externo)",
+        "desc": "Añada un disco duro externo para más espacio."
       }
     }
   },
