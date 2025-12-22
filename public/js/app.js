@@ -174,6 +174,7 @@ function setupOrderForm() {
       fullName: formData.get('fullName')?.trim(),
       email: formData.get('email')?.trim(),
       phone: formData.get('phone')?.trim(),
+      address: formData.get('address')?.trim(),
       location: formData.get('location')?.trim(),
       notes: formData.get('notes')?.trim(),
       services,

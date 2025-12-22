@@ -30,6 +30,7 @@ app.post('/order', async (req, res) => {
     fullName: order.fullName,
     email: order.email,
     phone: order.phone,
+    address: order.address,
     location: order.location,
     services: order.services,
     language: order.language,
