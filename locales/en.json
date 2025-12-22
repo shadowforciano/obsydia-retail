@@ -164,7 +164,7 @@
     "paymentInstructions": "Please submit payment via ATH Móvil to {{paymentNumber}} and include your order ID {{orderId}} in the payment description.",
     "orderIdLabel": "Order ID",
     "notesLabel": "Notes",
-    "outro": "Once payment is confirmed, we will begin the build.",
+    "outro": "Once payment is confirmed, we will begin the build and ship the server to the address you provided.",
     "items": {
       "pc": "Base PC",
       "jellyfin": "Jellyfin",

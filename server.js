@@ -233,6 +233,18 @@ function parseAmount(value) {
 }
 
 function parseQuotePayload(body) {
+  const normalizeArray = (value) => {
+    if (Array.isArray(value)) {
+      return value;
+    }
+    if (value === undefined || value === null || value === '') {
+      return [];
+    }
+    return [value];
+  };
+
+  const isProvided = (value) => value !== undefined && value !== null && String(value).trim() !== '';
+
   const pc = parseAmount(body.pc);
   if (pc === null || pc <= 0) {
     return { error: 'Base PC price is required.', quote: {} };
@@ -268,16 +280,32 @@ function parseQuotePayload(body) {
     { key: 'extra-storage', amount: extraStorage || 0 },
   ];
 
-  for (let index = 1; index <= 3; index += 1) {
-    const otherAmount = parseAmount(body[`otherAmount${index}`]);
+  const otherLabels = normalizeArray(body['otherLabel[]'] ?? body.otherLabel);
+  const otherAmounts = normalizeArray(body['otherAmount[]'] ?? body.otherAmount);
+  const maxOther = Math.max(otherLabels.length, otherAmounts.length);
+
+  for (let index = 0; index < maxOther; index += 1) {
+    const rawLabel = otherLabels[index];
+    const rawAmount = otherAmounts[index];
+    const otherLabel = String(rawLabel || '').trim();
+    const otherAmount = parseAmount(rawAmount);
+
     if (otherAmount === null) {
       return { error: 'Invalid other item amount.', quote: {} };
     }
-    const otherLabel = String(body[`otherLabel${index}`] || '').trim();
-    if (otherAmount && otherAmount > 0 && !otherLabel) {
+
+    const labelProvided = isProvided(rawLabel);
+    const amountProvided = isProvided(rawAmount);
+
+    if (labelProvided && (!amountProvided || otherAmount <= 0)) {
+      return { error: 'Other item amount is required.', quote: {} };
+    }
+
+    if (amountProvided && otherAmount > 0 && !labelProvided) {
       return { error: 'Other item label is required.', quote: {} };
     }
-    if (otherAmount && otherAmount > 0) {
+
+    if (labelProvided && amountProvided && otherAmount > 0) {
       items.push({ key: 'other', amount: otherAmount, label: otherLabel });
     }
   }
@@ -319,9 +347,6 @@ function buildQuoteDefaults(quote) {
     defaults[item.key] = item.amount ?? '';
   });
 
-  while (defaults.otherItems.length < 3) {
-    defaults.otherItems.push({ label: '', amount: '' });
-  }
 
   defaults.notes = quote.notes || '';
   return defaults;
