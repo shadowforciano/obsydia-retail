@@ -159,6 +159,7 @@
     "intro": "Aquí está su cotización para su servidor personalizado.",
     "itemsTitle": "Precio detallado",
     "totalLabel": "Total",
+    "currencyNote": "Todos los precios están en USD.",
     "paymentTitle": "Instrucciones de pago",
     "paymentInstructions": "Por favor realice el pago vía ATH Móvil al {{paymentNumber}} e incluya su ID de orden {{orderId}} en la descripción del pago.",
     "orderIdLabel": "ID de orden",

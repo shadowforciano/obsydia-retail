@@ -159,6 +159,7 @@
     "intro": "Here is your quote for your custom server.",
     "itemsTitle": "Itemized pricing",
     "totalLabel": "Total",
+    "currencyNote": "All prices are in USD.",
     "paymentTitle": "Payment instructions",
     "paymentInstructions": "Please submit payment via ATH Móvil to {{paymentNumber}} and include your order ID {{orderId}} in the payment description.",
     "orderIdLabel": "Order ID",

@@ -24,7 +24,7 @@ cp .env.example .env
 - `SMTP2GO_API_KEY`
 - `FROM_EMAIL` (must be verified in SMTP2GO)
 - `ADMIN_EMAILS` (comma-separated)
-- `ATH_MOBILE_NUMBER` (required for quote emails)
+- `ATH_MOBILE_NUMBER` (required for quote emails, digits only recommended)
 - `DATABASE_URL` (Railway Postgres connection string)
 - `DATABASE_SSL` (optional, set to `false` to disable SSL locally)
 - `SESSION_SECRET`

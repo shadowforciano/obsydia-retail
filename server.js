@@ -208,12 +208,13 @@ app.post(`/${adminPath}/orders/:id/quote`, async (req, res) => {
   } catch (error) {
     console.error('Quote email failed:', error.details || error);
     const quoteDefaults = buildQuoteDefaults(quote);
+    const errorMessage = getQuoteErrorMessage(error);
     return res.send(
       renderOrderDetail({
         order,
         adminPath,
         quoteDefaults,
-        message: 'Unable to send quote. Check your email settings.',
+        message: errorMessage,
         messageType: 'error',
       })
     );
@@ -320,6 +321,20 @@ function buildQuoteDefaults(quote) {
 
   defaults.notes = quote.notes || '';
   return defaults;
+}
+
+function getQuoteErrorMessage(error) {
+  const message = error?.message || '';
+  if (message.includes('SMTP2GO_API_KEY')) {
+    return 'SMTP2GO_API_KEY is not set.';
+  }
+  if (message.includes('FROM_EMAIL')) {
+    return 'FROM_EMAIL is not set or not verified.';
+  }
+  if (message.includes('ATH_MOBILE_NUMBER')) {
+    return 'ATH_MOBILE_NUMBER is not set.';
+  }
+  return 'Unable to send quote. Check your email settings.';
 }
 
 const PORT = process.env.PORT || 3000;
