@@ -76,7 +76,8 @@
     "notesLabel": "Notas",
     "submit": "Enviar orden",
     "submitting": "Enviando...",
-    "paymentNote": "Solo ATH Móvil. Las instrucciones de pago se muestran después de enviar.",
+    "paymentNote": "Solo ATH Móvil. Las instrucciones de pago se enviarán por correo después de enviar.",
+    "success": "¡Gracias! Su orden fue enviada. Revise su correo para los próximos pasos.",
     "disclaimer": "Le escribiremos para confirmar detalles y calendario.",
     "placeholders": {
       "fullName": "Su nombre completo",

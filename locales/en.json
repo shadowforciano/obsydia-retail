@@ -76,7 +76,8 @@
     "notesLabel": "Notes",
     "submit": "Submit order",
     "submitting": "Submitting...",
-    "paymentNote": "ATH Móvil only. Payment instructions appear after you submit.",
+    "paymentNote": "ATH Móvil only. Payment instructions are emailed after you submit.",
+    "success": "Thanks! Your order is in. Check your email for next steps.",
     "disclaimer": "We will email you to confirm details and timeline.",
     "placeholders": {
       "fullName": "Your full name",

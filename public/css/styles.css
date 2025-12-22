@@ -376,19 +376,8 @@ textarea:focus {
   font-weight: 500;
 }
 
-.confirmation {
-  display: flex;
-  justify-content: center;
-}
-
-.confirmation-card {
-  max-width: 700px;
-  text-align: center;
-  padding: 40px;
-  background: linear-gradient(135deg, rgba(68, 215, 182, 0.16), rgba(242, 168, 93, 0.18));
-  border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: var(--shadow);
+.form-status.is-success {
+  color: var(--accent-strong);
 }
 
 .site-footer {
@@ -418,10 +407,6 @@ textarea:focus {
   .hero-actions {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .confirmation-card {
-    padding: 28px;
   }
 }
 

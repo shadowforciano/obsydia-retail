@@ -5,7 +5,6 @@ const state = {
   lang: 'en',
   translations: {},
   currentTranslations: null,
-  confirmationMessage: '',
 };
 
 const elements = {
@@ -13,25 +12,12 @@ const elements = {
   languageField: document.getElementById('language-field'),
   orderForm: document.getElementById('order-form'),
   orderSection: document.getElementById('order'),
-  confirmation: document.getElementById('confirmation'),
-  confirmationMessage: document.getElementById('confirmation-message'),
   status: document.getElementById('form-status'),
   submitButton: document.querySelector('#order-form button[type="submit"]'),
 };
 
 function resolvePath(obj, path) {
   return path.split('.').reduce((acc, key) => (acc ? acc[key] : undefined), obj);
-}
-
-function shouldDeferElement(el) {
-  const group = el.dataset.i18nDefer;
-  if (!group) {
-    return false;
-  }
-  if (group === 'confirmation') {
-    return elements.confirmation && elements.confirmation.hidden;
-  }
-  return true;
 }
 
 async function loadTranslations(lang) {
@@ -51,13 +37,6 @@ async function loadTranslations(lang) {
 
 function applyTranslations(t) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
-    if (shouldDeferElement(el)) {
-      return;
-    }
-    if (el.dataset.i18n === 'confirmation.message' && state.confirmationMessage) {
-      el.textContent = state.confirmationMessage;
-      return;
-    }
     const value = resolvePath(t, el.dataset.i18n);
     if (value) {
       el.textContent = value;
@@ -183,6 +162,7 @@ function setupOrderForm() {
     }
 
     elements.status.textContent = '';
+    elements.status.classList.remove('is-success');
     setSubmitting(true, translations);
 
     const formData = new FormData(elements.orderForm);
@@ -212,6 +192,7 @@ function setupOrderForm() {
       const result = await response.json();
       if (!response.ok) {
         elements.status.textContent = result.message || translations.errors.server;
+        elements.status.classList.remove('is-success');
         setSubmitting(false, translations);
         return;
       }
@@ -221,17 +202,13 @@ function setupOrderForm() {
         elements.languageField.value = state.lang;
       }
 
-      state.confirmationMessage =
-        result.message || resolvePath(translations, 'confirmation.message') || '';
-      if (elements.confirmationMessage && state.confirmationMessage) {
-        elements.confirmationMessage.textContent = state.confirmationMessage;
-      }
-      elements.orderSection.hidden = true;
-      elements.confirmation.hidden = false;
-      applyTranslations(translations);
-      elements.confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      elements.status.textContent =
+        result.message || resolvePath(translations, 'order.success') || '';
+      elements.status.classList.add('is-success');
+      elements.orderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } catch (error) {
       elements.status.textContent = translations.errors.network;
+      elements.status.classList.remove('is-success');
     } finally {
       setSubmitting(false, translations);
     }
