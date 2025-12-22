@@ -107,7 +107,48 @@
     "paymentMessage": "Por favor realice el pago vía ATH Móvil al {{paymentNumber}}. Su servidor comenzará a construirse una vez se confirme el pago."
   },
   "footer": {
-    "note": "¿Preguntas? Le escribiremos por correo luego de enviar su orden."
+    "note": "¿Preguntas? Le escribiremos por correo luego de enviar su orden.",
+    "terms": "Términos de servicio"
+  },
+  "terms": {
+    "back": "Volver al inicio",
+    "title": "Términos de servicio",
+    "updated": "Última actualización: dic 2025",
+    "intro": "Al usar Obsydia Retail o enviar una orden, usted acepta estos Términos de servicio. Si no está de acuerdo, no utilice el sitio ni los servicios.",
+    "sections": {
+      "services": {
+        "title": "Servicios y estimados",
+        "body": "Obsydia construye mini servidores personalizados e instala los servicios que usted elija. Los estimados y las cotizaciones son informativos hasta que se confirmen por escrito."
+      },
+      "byod": {
+        "title": "Traiga su propio equipo (BYOD)",
+        "body": "Si trae su propio equipo, usted confirma que cumple con al menos 8 GB de RAM y suficiente almacenamiento para los GB que espera usar. Usted es responsable por la condición y compatibilidad del hardware."
+      },
+      "data": {
+        "title": "Datos y respaldos",
+        "body": "Usted es el único responsable de sus datos y respaldos. La pérdida de datos puede ocurrir por fallas de hardware, energía, errores de software o uso incorrecto."
+      },
+      "external": {
+        "title": "Almacenamiento externo",
+        "body": "Se pueden añadir discos externos cuando el servicio o la aplicación lo permita. La compatibilidad y el rendimiento no están garantizados."
+      },
+      "warranty": {
+        "title": "Sin garantías",
+        "body": "Los servicios se ofrecen \"tal cual\" sin garantías de ningún tipo, incluyendo disponibilidad, rendimiento o aptitud para un propósito específico."
+      },
+      "liability": {
+        "title": "Limitación de responsabilidad",
+        "body": "En la medida máxima permitida por la ley, Obsydia no es responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo pérdida de datos, ganancias o uso. La responsabilidad se limita a las cantidades pagadas por el servicio."
+      },
+      "release": {
+        "title": "Liberación y resolución de disputas",
+        "body": "Al usar nuestros servicios, usted acepta liberar y mantener indemne a Obsydia ante reclamaciones relacionadas con pérdida de datos, interrupciones del servicio o software de terceros, y acepta no iniciar acciones legales ni demandas colectivas contra Obsydia, en la medida máxima permitida por la ley. Por favor contáctenos primero para resolver cualquier situación."
+      },
+      "law": {
+        "title": "Ley aplicable",
+        "body": "Estos términos se rigen por las leyes de Puerto Rico."
+      }
+    }
   },
   "alt": {
     "hero": "Servidor personal de Obsydia sobre un escritorio",
@@ -139,6 +180,8 @@
     "servicesTitle": "Servicios seleccionados",
     "paymentTitle": "Cotización y próximos pasos",
     "paymentInstructions": "Estamos revisando su solicitud y le enviaremos una cotización con el precio final e instrucciones de pago. Aún no se requiere pago.",
+    "termsLabel": "Términos de servicio",
+    "termsLine": "Términos de servicio: {{termsUrl}}",
     "nextSteps": "Nos comunicaremos si necesitamos información adicional.",
     "noServices": "No se seleccionaron servicios.",
     "noNotes": "No se indicaron notas.",
@@ -166,6 +209,8 @@
     "orderIdLabel": "ID de orden",
     "notesLabel": "Notas",
     "outro": "Una vez se confirme el pago, comenzaremos la construcción y enviaremos el servidor a la dirección provista.",
+    "termsLabel": "Términos de servicio",
+    "termsLine": "Términos de servicio: {{termsUrl}}",
     "items": {
       "pc": "PC base",
       "jellyfin": "Streaming de películas y música",

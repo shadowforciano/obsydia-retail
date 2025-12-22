@@ -59,6 +59,10 @@ app.use(session(sessionConfig));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/locales', express.static(path.join(__dirname, 'locales')));
 
+app.get('/terms', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'terms.html'));
+});
+
 app.use(`/${adminPath}`, (req, res, next) => {
   res.setHeader('X-Robots-Tag', 'noindex, nofollow');
   next();

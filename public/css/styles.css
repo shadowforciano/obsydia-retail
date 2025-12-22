@@ -386,8 +386,54 @@ textarea:focus {
 }
 
 .site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   text-align: center;
   padding: 40px 24px 80px;
+}
+
+.terms-link,
+.terms-back {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.terms-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.terms-header {
+  margin-bottom: 32px;
+}
+
+.terms-page h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin: 12px 0;
+}
+
+.terms-page h2 {
+  font-size: 1.2rem;
+  margin: 0 0 12px;
+}
+
+.terms-updated {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.terms-card {
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
 }
 
 .js .reveal {

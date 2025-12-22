@@ -107,7 +107,48 @@
     "paymentMessage": "Please submit payment via ATH Móvil to {{paymentNumber}}. Your build will begin once payment is confirmed."
   },
   "footer": {
-    "note": "Questions? We'll reach out by email after you submit."
+    "note": "Questions? We'll reach out by email after you submit.",
+    "terms": "Terms of Service"
+  },
+  "terms": {
+    "back": "Back to home",
+    "title": "Terms of Service",
+    "updated": "Last updated: Dec 2025",
+    "intro": "By using Obsydia Retail or submitting an order, you agree to these Terms of Service. If you do not agree, do not use the site or services.",
+    "sections": {
+      "services": {
+        "title": "Services and estimates",
+        "body": "Obsydia builds custom mini servers and installs the services you choose. Estimates and quotes are informational until confirmed in writing."
+      },
+      "byod": {
+        "title": "Bring your own device (BYOD)",
+        "body": "If you provide your own hardware, you confirm it meets at least 8 GB RAM and has enough storage for the GB you expect to use. You are responsible for hardware condition and compatibility."
+      },
+      "data": {
+        "title": "Data and backups",
+        "body": "You are solely responsible for your data and backups. Data loss can occur due to hardware failure, power issues, software bugs, or user error."
+      },
+      "external": {
+        "title": "External storage",
+        "body": "External hard drives can be added when supported by the selected service or application. Compatibility and performance are not guaranteed."
+      },
+      "warranty": {
+        "title": "No warranties",
+        "body": "Services are provided \"as is\" without warranties of any kind, including uptime, performance, or fitness for a particular purpose."
+      },
+      "liability": {
+        "title": "Limitation of liability",
+        "body": "To the maximum extent permitted by law, Obsydia is not liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, profits, or use. Liability is limited to the amounts you paid for the service."
+      },
+      "release": {
+        "title": "Release and dispute resolution",
+        "body": "By using our services, you agree to release and hold Obsydia harmless from claims related to data loss, service interruptions, or third-party software, and you agree not to pursue legal action or class actions against Obsydia, to the maximum extent permitted by law. Please contact us first to resolve any concerns."
+      },
+      "law": {
+        "title": "Governing law",
+        "body": "These terms are governed by the laws of Puerto Rico."
+      }
+    }
   },
   "alt": {
     "hero": "Obsydia personal server on a desk",
@@ -139,6 +180,8 @@
     "servicesTitle": "Selected services",
     "paymentTitle": "Quote and next steps",
     "paymentInstructions": "We are reviewing your request and will email a quote with final pricing and payment instructions. No payment is required yet.",
+    "termsLabel": "Terms of Service",
+    "termsLine": "Terms of Service: {{termsUrl}}",
     "nextSteps": "We'll reach out if we need any additional details.",
     "noServices": "No services selected.",
     "noNotes": "No notes provided.",
@@ -166,6 +209,8 @@
     "orderIdLabel": "Order ID",
     "notesLabel": "Notes",
     "outro": "Once payment is confirmed, we will begin the build and ship the server to the address you provided.",
+    "termsLabel": "Terms of Service",
+    "termsLine": "Terms of Service: {{termsUrl}}",
     "items": {
       "pc": "Base PC",
       "jellyfin": "Movie & Music Streaming",

@@ -21,6 +21,7 @@ cp .env.example .env
 ```
 
 3) Set the following values in `.env`:
+- `PUBLIC_BASE_URL` (e.g. `https://server.obsydiapr.com`, used for email links)
 - `SMTP2GO_API_KEY`
 - `FROM_EMAIL` (must be verified in SMTP2GO)
 - `ADMIN_EMAILS` (comma-separated)
@@ -43,6 +44,7 @@ The server listens on `PORT` (defaults to 3000).
 ## Railway Deployment
 - Set the start command to `npm start`.
 - Ensure the environment variables are configured in Railway:
+  - `PUBLIC_BASE_URL`
   - `SMTP2GO_API_KEY`
   - `FROM_EMAIL`
   - `ADMIN_EMAILS`
@@ -75,6 +77,9 @@ All images live in `public/images/` and must use these exact filenames (16:9 rat
 
 ## Admin Email Configuration
 Set `ADMIN_EMAILS` as a comma-separated list. If left empty, only the customer confirmation email is sent.
+
+## Terms of Service
+The Terms of Service page is available at `/terms` and is linked in the site footer and customer emails.
 
 ## Admin Portal
 The admin portal is available at `/{ADMIN_PATH}` (default `/admin`). It is not linked in the public site.
