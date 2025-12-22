@@ -1,6 +1,7 @@
 document.documentElement.classList.add('js');
 
 const supportedLanguages = ['en', 'es'];
+const assetVersion = document.documentElement.dataset.assetVersion || '1';
 const state = {
   lang: 'en',
   translations: {},
@@ -25,7 +26,7 @@ async function loadTranslations(lang) {
     return state.translations[lang];
   }
 
-  const response = await fetch(`/locales/${lang}.json`);
+  const response = await fetch(`/locales/${lang}.json?v=${assetVersion}`);
   if (!response.ok) {
     throw new Error(`Unable to load locale ${lang}`);
   }
