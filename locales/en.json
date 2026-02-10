@@ -91,7 +91,6 @@
       "title": "Install RustDesk",
       "updated": "Last updated: Feb 10, 2026",
       "intro": "RustDesk is a remote desktop app used for support and access across devices.",
-      "alert": "You may see a warning that says \"You are being scammed\" on the RustDesk website. We will only access your computer with your permission to install RustDesk, and you can delete it afterward and change your password. Our goal is to be professional and do a great job.",
       "links": {
         "website": "RustDesk official website",
         "github": "RustDesk GitHub releases",

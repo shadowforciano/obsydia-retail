@@ -91,7 +91,6 @@
       "title": "Instalar RustDesk",
       "updated": "\u00daltima actualizaci\u00f3n: 10 feb 2026",
       "intro": "RustDesk es una aplicaci\u00f3n de escritorio remoto para soporte y acceso entre dispositivos.",
-      "alert": "Es posible que vea una advertencia que dice \"You are being scammed\" en el sitio de RustDesk. Solo accederemos a su computadora con su permiso para instalar RustDesk, y luego puede eliminarlo y cambiar su contrase\u00f1a. Nuestro objetivo es ser profesionales y hacer un buen trabajo.",
       "links": {
         "website": "Sitio oficial de RustDesk",
         "github": "Releases de GitHub de RustDesk",
