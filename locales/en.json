@@ -91,6 +91,10 @@
         "title": "Third-party software and services",
         "body": "We may use or install third-party and open-source software. Those providers are not controlled by Obsydia and their terms and availability apply."
       },
+      "contentCompliance": {
+        "title": "Use of software and content",
+        "body": "This site and the services offered consist of hardware sales and/or configuring customer equipment (PC, laptop, or server) with open-source software for legitimate purposes such as personal libraries, backups, private storage, and streaming within private networks. No included content: we do not sell, distribute, host, or provide movies, series, music, or other copyrighted material. User responsibility: you are solely responsible for any content you add, download, access, share, or transmit using the equipment or software, and you agree to comply with applicable laws and third-party rights. No promotion of infringement: we do not promote or encourage use of the system to infringe copyrights or evade paid services. Third-party software: installed applications belong to their respective authors and are provided under their corresponding licenses. You accept that access to third-party services or resources depends on those third parties and may change or stop working. Limitation of liability: to the extent permitted by law, the seller is not responsible for your use of the equipment/software, including claims of infringement, violations of third-party terms, data loss, or service interruptions. Compliance recommendation: you must use only content you own, are licensed to use, is public domain, or you have express permission to use. By purchasing or contracting, you accept these terms."
+      },
       "security": {
         "title": "Security, network, and environment",
         "body": "You are responsible for your network, power, physical security, and safe use of the system. Obsydia is not responsible for outages, ISP issues, power events, malware, or unauthorized access."
