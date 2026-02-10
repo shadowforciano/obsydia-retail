@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Obsydia Retail",
+    "title": "Obsydia Server",
     "brand": "Obsydia"
   },
   "language": {
@@ -281,3 +281,4 @@
     "prHome": "Puerto Rico home setup with a compact server"
   }
 }
+
