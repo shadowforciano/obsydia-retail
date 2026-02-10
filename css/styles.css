@@ -367,6 +367,16 @@ p {
   font-size: 0.95rem;
 }
 
+.kb-alert {
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 107, 107, 0.6);
+  background: rgba(255, 107, 107, 0.12);
+  padding: 16px 18px;
+  color: #ffd5d5;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
 .kb-steps {
   margin: 0;
   padding-left: 20px;

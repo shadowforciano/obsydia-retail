@@ -79,6 +79,11 @@
         "title": "Instalar RustDesk (Soporte remoto)",
         "summary": "Instrucciones paso a paso para descargar e instalar RustDesk en Windows, macOS, Linux, Android y iOS.",
         "cta": "Leer art\u00edculo"
+      },
+      "docker": {
+        "title": "Instalar Docker Desktop",
+        "summary": "Instrucciones simples para instalar Docker Desktop en Windows o macOS y verificar que est\u00e1 funcionando.",
+        "cta": "Leer art\u00edculo"
       }
     },
     "rustdesk": {
@@ -86,6 +91,7 @@
       "title": "Instalar RustDesk",
       "updated": "\u00daltima actualizaci\u00f3n: 10 feb 2026",
       "intro": "RustDesk es una aplicaci\u00f3n de escritorio remoto para soporte y acceso entre dispositivos.",
+      "alert": "Es posible que vea una advertencia que dice \"You are being scammed\" en el sitio de RustDesk. Solo accederemos a su computadora con su permiso para instalar RustDesk, y luego puede eliminarlo y cambiar su contrase\u00f1a. Nuestro objetivo es ser profesionales y hacer un buen trabajo.",
       "links": {
         "website": "Sitio oficial de RustDesk",
         "github": "Releases de GitHub de RustDesk",
@@ -147,6 +153,53 @@
             "Finalice la sesi\u00f3n cuando termine el soporte."
           ],
           "note": "RustDesk muestra una contrase\u00f1a nueva cada vez que se inicia. Esto ayuda a evitar accesos no autorizados."
+        }
+      }
+    },
+    "docker": {
+      "back": "Volver a la Base de conocimientos",
+      "title": "Instalar Docker Desktop",
+      "updated": "\u00daltima actualizaci\u00f3n: 10 feb 2026",
+      "intro": "Docker Desktop le permite ejecutar contenedores en Windows y macOS con una app de escritorio sencilla.",
+      "links": {
+        "website": "P\u00e1gina de descarga de Docker Desktop",
+        "docs": "Documentaci\u00f3n de Docker Desktop"
+      },
+      "sections": {
+        "sources": {
+          "title": "Descargue desde fuentes oficiales",
+          "body": "Use la p\u00e1gina oficial de descarga y la documentaci\u00f3n de Docker para evitar instaladores falsos."
+        },
+        "windows": {
+          "title": "Windows (10/11)",
+          "steps": [
+            "Descargue el instalador de Windows desde la p\u00e1gina oficial.",
+            "Ejecute el instalador y deje activada la opci\u00f3n de WSL 2 si se le solicita.",
+            "Reinicie la PC si el instalador lo pide.",
+            "Abra Docker Desktop y espere a que el motor aparezca como en ejecuci\u00f3n."
+          ]
+        },
+        "macos": {
+          "title": "macOS",
+          "steps": [
+            "Descargue el instalador correcto para su Mac (Apple Silicon o Intel).",
+            "Abra el .dmg y arrastre Docker Desktop a Aplicaciones.",
+            "Abra Docker Desktop y apruebe los permisos cuando se lo solicite.",
+            "Espere a que el estado del motor aparezca como en ejecuci\u00f3n."
+          ]
+        },
+        "verify": {
+          "title": "Verifique la instalaci\u00f3n (opcional)",
+          "steps": [
+            "Abra Terminal (macOS) o PowerShell (Windows).",
+            "Ejecute: docker --version",
+            "Ejecute: docker run hello-world"
+          ],
+          "note": "Si ve un mensaje de \u00e9xito, Docker Desktop est\u00e1 listo."
+        },
+        "linux": {
+          "title": "Nota sobre Linux",
+          "body": "Docker Desktop es para Windows y macOS. En Linux, instale Docker Engine con el gestor de paquetes de su distribuci\u00f3n."
         }
       }
     }

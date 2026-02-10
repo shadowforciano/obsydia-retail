@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" data-asset-version="20250101" data-locale-base="../locales/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Obsydia Retail</title>
+    <link rel="icon" type="image/png" href="../images/ownership.png" />
+    <link rel="apple-touch-icon" href="../images/ownership.png" />
+    <link rel="stylesheet" href="../css/styles.css?v=20250101" />
+    <script defer src="../js/app.js?v=20250101"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" data-i18n="app.brand">Obsydia</a>
+      <div class="lang-switch" aria-label="Language selector" data-i18n-aria-label="language.ariaLabel">
+        <span class="lang-label" data-i18n="language.label">Language</span>
+        <button class="lang-btn" type="button" data-lang="en" data-i18n="language.en" aria-pressed="false">
+          EN
+        </button>
+        <button class="lang-btn" type="button" data-lang="es" data-i18n="language.es" aria-pressed="false">
+          ES
+        </button>
+      </div>
+    </header>
+
+    <main class="kb-page">
+      <div class="terms-header">
+        <a class="terms-back" href="index.html" data-i18n="kb.docker.back">Back to Knowledge Base</a>
+        <h1 data-i18n="kb.docker.title">Install Docker Desktop</h1>
+        <p class="terms-updated" data-i18n="kb.docker.updated">Last updated: Feb 10, 2026</p>
+        <p data-i18n="kb.docker.intro">
+          Docker Desktop lets you run containers on Windows and macOS with a simple desktop app.
+        </p>
+      </div>
+
+      <section class="terms-card">
+        <h2 data-i18n="kb.docker.sections.sources.title">Download from official sources</h2>
+        <p data-i18n="kb.docker.sections.sources.body">
+          Use Docker's official download page and documentation to avoid fake installers.
+        </p>
+        <ul class="checklist">
+          <li>
+            <a class="terms-link" href="https://www.docker.com/products/docker-desktop/" target="_blank" rel="noopener" data-i18n="kb.docker.links.website">
+              Docker Desktop download page
+            </a>
+          </li>
+          <li>
+            <a class="terms-link" href="https://docs.docker.com/desktop/" target="_blank" rel="noopener" data-i18n="kb.docker.links.docs">
+              Docker Desktop documentation
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="terms-card">
+        <h2 data-i18n="kb.docker.sections.windows.title">Windows (10/11)</h2>
+        <ol class="kb-steps">
+          <li data-i18n="kb.docker.sections.windows.steps.0">Download the Windows installer from the official page.</li>
+          <li data-i18n="kb.docker.sections.windows.steps.1">Run the installer and keep the WSL 2 option enabled if prompted.</li>
+          <li data-i18n="kb.docker.sections.windows.steps.2">Restart your PC if the installer asks.</li>
+          <li data-i18n="kb.docker.sections.windows.steps.3">Open Docker Desktop and wait for the engine to show as running.</li>
+        </ol>
+      </section>
+
+      <section class="terms-card">
+        <h2 data-i18n="kb.docker.sections.macos.title">macOS</h2>
+        <ol class="kb-steps">
+          <li data-i18n="kb.docker.sections.macos.steps.0">Download the correct installer for your Mac (Apple Silicon or Intel).</li>
+          <li data-i18n="kb.docker.sections.macos.steps.1">Open the .dmg and drag Docker Desktop into Applications.</li>
+          <li data-i18n="kb.docker.sections.macos.steps.2">Open Docker Desktop and approve the permissions when prompted.</li>
+          <li data-i18n="kb.docker.sections.macos.steps.3">Wait for the engine status to show as running.</li>
+        </ol>
+      </section>
+
+      <section class="terms-card">
+        <h2 data-i18n="kb.docker.sections.verify.title">Verify the install (optional)</h2>
+        <ol class="kb-steps">
+          <li data-i18n="kb.docker.sections.verify.steps.0">Open Terminal (macOS) or PowerShell (Windows).</li>
+          <li data-i18n="kb.docker.sections.verify.steps.1">Run: docker --version</li>
+          <li data-i18n="kb.docker.sections.verify.steps.2">Run: docker run hello-world</li>
+        </ol>
+        <p class="kb-note" data-i18n="kb.docker.sections.verify.note">
+          If you see a success message, Docker Desktop is ready to use.
+        </p>
+      </section>
+
+      <section class="terms-card">
+        <h2 data-i18n="kb.docker.sections.linux.title">Linux note</h2>
+        <p class="kb-note" data-i18n="kb.docker.sections.linux.body">
+          Docker Desktop is for Windows and macOS. On Linux, install Docker Engine using your distro's package manager.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a class="terms-link" href="../terms.html" data-i18n="footer.terms">Terms of Service</a>
+        <a class="terms-link" href="index.html" data-i18n="kb.docker.back">Back to Knowledge Base</a>
+      </div>
+    </footer>
+  </body>
+</html>
