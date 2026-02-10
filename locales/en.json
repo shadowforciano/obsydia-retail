@@ -7,18 +7,14 @@
     "label": "Language",
     "en": "EN",
     "es": "ES",
-    "ariaLabel": "Language selector",
-    "names": {
-      "en": "English",
-      "es": "Spanish"
-    }
+    "ariaLabel": "Language selector"
   },
   "hero": {
     "eyebrow": "Personal home servers",
     "headline": "Own your media. Keep it home.",
     "subheadline": "Obsydia builds mini personal servers for streaming, photos, ebooks, and audiobooks, configured for your home in Puerto Rico.",
-    "cta": "Start your build",
-    "tag": "ATH Móvil payments only"
+    "cta": "Explore services",
+    "tag": "Built locally in Puerto Rico"
   },
   "services": {
     "title": "Choose your services",
@@ -39,10 +35,6 @@
       "audiobookshelf": {
         "name": "Audiobook & Podcast Streaming",
         "desc": "Audiobooks and podcasts with offline access."
-      },
-      "extra-storage": {
-        "name": "Extra Storage (External Drive)",
-        "desc": "Add an external hard drive for expanded storage."
       }
     }
   },
@@ -73,48 +65,15 @@
       "Simple setup for everyday use"
     ]
   },
-  "order": {
-    "title": "Order your server",
-    "subtitle": "Tell us what you want and we'll confirm details by email.",
-    "servicesLabel": "Select services",
-    "notesLabel": "Notes",
-    "submit": "Submit order",
-    "submitting": "Submitting...",
-    "estimateNote": "Estimate: new builds typically start around $140. BYOD (bring your own device) is welcome with at least 8 GB RAM and enough storage for the GB you expect to use. External drives can be added when supported.",
-    "paymentNote": "ATH Móvil only. We will email a quote before any payment.",
-    "success": "Thanks! Your order is in. Check your email for next steps.",
-    "disclaimer": "We will email you to confirm details and timeline.",
-    "placeholders": {
-      "fullName": "Your full name",
-      "email": "you@example.com",
-      "phone": "939-555-1234",
-      "address": "1234 Street, Apt 2",
-      "location": "City, PR",
-      "notes": "Share preferences, storage needs, or questions"
-    }
-  },
-  "form": {
-    "fullName": "Full Name",
-    "email": "Email",
-    "phone": "Phone",
-    "address": "Shipping Address",
-    "location": "Location",
-    "notes": "Notes"
-  },
-  "confirmation": {
-    "title": "Order received",
-    "message": "Payment instructions will appear after submitting your order.",
-    "paymentMessage": "Please submit payment via ATH Móvil to {{paymentNumber}}. Your build will begin once payment is confirmed."
-  },
   "footer": {
-    "note": "Questions? We'll reach out by email after you submit.",
+    "note": "Questions? Review the services and terms for details.",
     "terms": "Terms of Service"
   },
   "terms": {
     "back": "Back to home",
     "title": "Terms of Service",
     "updated": "Last updated: Dec 2025",
-    "intro": "By using Obsydia Retail or submitting an order, you agree to these Terms of Service. If you do not agree, do not use the site or services.",
+    "intro": "By using Obsydia Retail, you agree to these Terms of Service.",
     "sections": {
       "services": {
         "title": "Services and estimates",
@@ -179,66 +138,5 @@
     "ownership": "Shield and storage icons symbolizing data ownership",
     "built": "Custom-built server hardware on a workbench",
     "prHome": "Puerto Rico home setup with a compact server"
-  },
-  "errors": {
-    "required": "Please fill out all required fields.",
-    "email": "Please enter a valid email address.",
-    "services": "Please select at least one service.",
-    "phone": "Please enter a phone number.",
-    "address": "Please enter a shipping address.",
-    "notes": "Please keep notes under 1000 characters.",
-    "length": "Please shorten one of the fields.",
-    "server": "Something went wrong while sending your order. Please try again.",
-    "network": "We could not connect. Please check your connection and try again."
-  },
-  "email": {
-    "customerSubject": "Your Obsydia server order",
-    "adminSubject": "New Obsydia Retail order from {{name}}",
-    "intro": "Thanks for your order! Here is your summary:",
-    "adminIntro": "A new order has been submitted.",
-    "summaryTitle": "Order summary",
-    "servicesTitle": "Selected services",
-    "paymentTitle": "Quote and next steps",
-    "paymentInstructions": "We are reviewing your request and will email a quote with final pricing and payment instructions. No payment is required yet.",
-    "termsLabel": "Terms of Service",
-    "termsLine": "By submitting your order, you agree to our Terms of Service: {{termsUrl}}",
-    "nextSteps": "We'll reach out if we need any additional details.",
-    "noServices": "No services selected.",
-    "noNotes": "No notes provided.",
-    "notProvided": "Not provided",
-    "labels": {
-      "name": "Full Name",
-      "email": "Email",
-      "phone": "Phone",
-      "address": "Shipping Address",
-      "location": "Location",
-      "notes": "Notes",
-      "language": "Language",
-      "orderId": "Order ID",
-      "timestamp": "Submitted"
-    }
-  },
-  "quote": {
-    "subject": "Obsydia quote for order {{orderId}}",
-    "intro": "Here is your quote for your custom server.",
-    "itemsTitle": "Itemized pricing",
-    "totalLabel": "Total",
-    "currencyNote": "All prices are in USD.",
-    "paymentTitle": "Payment instructions",
-    "paymentInstructions": "Please submit payment via ATH Móvil to {{paymentNumber}} and include your order ID {{orderId}} in the payment description.",
-    "orderIdLabel": "Order ID",
-    "notesLabel": "Notes",
-    "outro": "Once payment is confirmed, we will begin the build and ship the server to the address you provided.",
-    "termsLabel": "Terms of Service",
-    "termsLine": "By proceeding, you agree to our Terms of Service: {{termsUrl}}",
-    "items": {
-      "pc": "Base PC",
-      "jellyfin": "Movie & Music Streaming",
-      "immich": "Photo Storage & Backup",
-      "kavita": "Ebooks & Comics Library",
-      "audiobookshelf": "Audiobook & Podcast Streaming",
-      "extra-storage": "Extra Storage (External Drive)",
-      "other": "Other"
-    }
   }
 }

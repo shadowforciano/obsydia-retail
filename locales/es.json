@@ -7,47 +7,39 @@
     "label": "Idioma",
     "en": "EN",
     "es": "ES",
-    "ariaLabel": "Selector de idioma",
-    "names": {
-      "en": "Inglés",
-      "es": "Español"
-    }
+    "ariaLabel": "Selector de idioma"
   },
   "hero": {
     "eyebrow": "Servidores personales para el hogar",
-    "headline": "Sea dueño de sus medios. Manténgalos en casa.",
-    "subheadline": "Obsydia construye mini servidores personales para streaming, fotos, libros y audiolibros, configurados para su hogar en Puerto Rico.",
-    "cta": "Comenzar mi servidor",
-    "tag": "Pagos solo por ATH Móvil"
+    "headline": "Sea due\u00f1o de sus medios. Mant\u00e9ngalos en casa.",
+    "subheadline": "Obsydia construye mini servidores personales para streaming, fotos, ebooks y audiolibros, configurados para su hogar en Puerto Rico.",
+    "cta": "Explorar servicios",
+    "tag": "Construido en Puerto Rico"
   },
   "services": {
     "title": "Elija sus servicios",
-    "intro": "Seleccione cualquier combinación. Los instalamos y los ajustamos por usted.",
+    "intro": "Seleccione cualquier combinaci\u00f3n. Los instalamos y los ajustamos por usted.",
     "items": {
       "jellyfin": {
-        "name": "Streaming de películas y música",
-        "desc": "Streaming de películas y música, sin suscripciones."
+        "name": "Streaming de pel\u00edculas y m\u00fasica",
+        "desc": "Streaming de pel\u00edculas y m\u00fasica, sin suscripciones."
       },
       "immich": {
         "name": "Almacenamiento y respaldo de fotos",
         "desc": "Respaldo privado de fotos que permanece en su servidor."
       },
       "kavita": {
-        "name": "Biblioteca de ebooks y cómics",
-        "desc": "Ebooks y cómics en una biblioteca del hogar."
+        "name": "Biblioteca de ebooks y c\u00f3mics",
+        "desc": "Ebooks y c\u00f3mics en una biblioteca del hogar."
       },
       "audiobookshelf": {
         "name": "Streaming de audiolibros y podcasts",
-        "desc": "Audiolibros y podcasts con acceso sin conexión."
-      },
-      "extra-storage": {
-        "name": "Almacenamiento extra (disco externo)",
-        "desc": "Añada un disco duro externo para más espacio."
+        "desc": "Audiolibros y podcasts con acceso sin conexi\u00f3n."
       }
     }
   },
   "ownership": {
-    "title": "Sea dueño de sus datos",
+    "title": "Sea due\u00f1o de sus datos",
     "body": "Sin cuotas recurrentes. Sus archivos viven en el hardware que usted controla, no en una nube ajena.",
     "points": [
       "Sin suscripciones ni cambios forzados",
@@ -57,116 +49,83 @@
   },
   "built": {
     "title": "Construido a mano, configurado para usted",
-    "body": "Cada servidor se ensambla, se prueba y se ajusta según sus servicios. Lo dejamos simple para que funcione desde el primer día.",
+    "body": "Cada servidor se ensambla, se prueba y se ajusta seg\u00fan sus servicios. Lo dejamos simple para que funcione desde el primer d\u00eda.",
     "points": [
-      "Construcción personalizada para sus servicios",
+      "Construcci\u00f3n personalizada para sus servicios",
       "Compacto, silencioso y listo para el hogar",
-      "Guía de configuración con soporte local"
+      "Gu\u00eda de configuraci\u00f3n con soporte local"
     ]
   },
   "prFocus": {
     "title": "Pensado para hogares en Puerto Rico",
-    "body": "Enfoque local, soporte cercano y una configuración diseñada para espacios familiares.",
+    "body": "Enfoque local, soporte cercano y una configuraci\u00f3n dise\u00f1ada para espacios familiares.",
     "points": [
-      "Soporte en español o inglés",
+      "Soporte en espa\u00f1ol o ingl\u00e9s",
       "Optimizado para internet residencial",
-      "Configuración simple para el día a día"
+      "Configuraci\u00f3n simple para el d\u00eda a d\u00eda"
     ]
   },
-  "order": {
-    "title": "Ordene su servidor",
-    "subtitle": "Cuéntenos qué necesita y le confirmaremos los detalles por correo.",
-    "servicesLabel": "Seleccione servicios",
-    "notesLabel": "Notas",
-    "submit": "Enviar orden",
-    "submitting": "Enviando...",
-    "estimateNote": "Estimado: un servidor nuevo suele comenzar alrededor de $140. También aceptamos BYOD (traiga su propio equipo) con al menos 8 GB de RAM y suficiente almacenamiento para los GB que espera usar. Podemos añadir un disco externo si el servicio o la aplicación lo permite.",
-    "paymentNote": "Solo ATH Móvil. Enviaremos una cotización antes de cualquier pago.",
-    "success": "¡Gracias! Su orden fue enviada. Revise su correo para los próximos pasos.",
-    "disclaimer": "Le escribiremos para confirmar detalles y calendario.",
-    "placeholders": {
-      "fullName": "Su nombre completo",
-      "email": "su@email.com",
-      "phone": "939-555-1234",
-      "address": "1234 Calle, Apt 2",
-      "location": "Ciudad, PR",
-      "notes": "Comparta preferencias, almacenamiento o preguntas"
-    }
-  },
-  "form": {
-    "fullName": "Nombre completo",
-    "email": "Correo electrónico",
-    "phone": "Teléfono",
-    "address": "Dirección de envío",
-    "location": "Ubicación",
-    "notes": "Notas"
-  },
-  "confirmation": {
-    "title": "Orden recibida",
-    "message": "Las instrucciones de pago aparecerán luego de enviar su orden.",
-    "paymentMessage": "Por favor realice el pago vía ATH Móvil al {{paymentNumber}}. Su servidor comenzará a construirse una vez se confirme el pago."
-  },
   "footer": {
-    "note": "¿Preguntas? Le escribiremos por correo luego de enviar su orden.",
-    "terms": "Términos de servicio"
+    "note": "\u00bfPreguntas? Revise los servicios y t\u00e9rminos para m\u00e1s detalles.",
+    "terms": "T\u00e9rminos de servicio"
   },
   "terms": {
     "back": "Volver al inicio",
-    "title": "Términos de servicio",
-    "updated": "Última actualización: dic 2025",
-    "intro": "Al usar Obsydia Retail o enviar una orden, usted acepta estos Términos de servicio. Si no está de acuerdo, no utilice el sitio ni los servicios.",
+    "title": "T\u00e9rminos de servicio",
+    "updated": "\u00daltima actualizaci\u00f3n: dic 2025",
+    "intro": "Al usar Obsydia Retail, usted acepta estos T\u00e9rminos de servicio.",
     "sections": {
       "services": {
         "title": "Servicios y estimados",
-        "body": "Obsydia construye mini servidores personalizados e instala los servicios que usted elija. Los estimados y las cotizaciones son informativos hasta confirmación por escrito. El precio, el calendario y la disponibilidad pueden cambiar según el hardware y los requisitos."
+        "body": "Obsydia construye mini servidores personalizados e instala los servicios que usted elija. Los estimados y las cotizaciones son informativos hasta confirmaci\u00f3n por escrito. El precio, el calendario y la disponibilidad pueden cambiar seg\u00fan el hardware y los requisitos."
       },
       "byod": {
         "title": "Traiga su propio equipo (BYOD)",
-        "body": "Si trae su propio equipo, usted confirma que cumple con al menos 8 GB de RAM y suficiente almacenamiento para los GB que espera usar. Usted es responsable por la condición y compatibilidad del hardware."
+        "body": "Si trae su propio equipo, usted confirma que cumple con al menos 8 GB de RAM y suficiente almacenamiento para los GB que espera usar. Usted es responsable por la condici\u00f3n y compatibilidad del hardware."
       },
       "data": {
         "title": "Datos y respaldos",
-        "body": "Usted es el único responsable de sus datos y respaldos. La pérdida de datos puede ocurrir por fallas de hardware, energía, errores de software o uso incorrecto. Debe mantener respaldos independientes."
+        "body": "Usted es el \u00fanico responsable de sus datos y respaldos. La p\u00e9rdida de datos puede ocurrir por fallas de hardware, energ\u00eda, errores de software o uso incorrecto. Debe mantener respaldos independientes."
       },
       "thirdParty": {
         "title": "Software y servicios de terceros",
-        "body": "Podemos usar o instalar software de terceros y de código abierto. Esos proveedores no están bajo el control de Obsydia y aplican sus términos y disponibilidad."
+        "body": "Podemos usar o instalar software de terceros y de c\u00f3digo abierto. Esos proveedores no est\u00e1n bajo el control de Obsydia y aplican sus t\u00e9rminos y disponibilidad."
       },
       "security": {
         "title": "Seguridad, red y entorno",
-        "body": "Usted es responsable de su red, energía, seguridad física y uso seguro del sistema. Obsydia no es responsable por interrupciones, problemas de ISP, fallas eléctricas, malware o accesos no autorizados."
+        "body": "Usted es responsable de su red, energ\u00eda, seguridad f\u00edsica y uso seguro del sistema. Obsydia no es responsable por interrupciones, problemas de ISP, fallas el\u00e9ctricas, malware o accesos no autorizados."
       },
       "external": {
         "title": "Almacenamiento externo",
-        "body": "Se pueden añadir discos externos cuando el servicio o la aplicación lo permita. La compatibilidad y el rendimiento no están garantizados."
+        "body": "Se pueden a\u00f1adir discos externos cuando el servicio o la aplicaci\u00f3n lo permita. La compatibilidad y el rendimiento no est\u00e1n garantizados."
       },
       "warranty": {
-        "title": "Sin garantías",
-        "body": "Los servicios se ofrecen \"tal cual\" sin garantías de ningún tipo, incluyendo disponibilidad, rendimiento o aptitud para un propósito específico."
+        "title": "Sin garant\u00edas",
+        "body": "Los servicios se ofrecen \"tal cual\" sin garant\u00edas de ning\u00fan tipo, incluyendo disponibilidad, rendimiento o aptitud para un prop\u00f3sito espec\u00edfico."
       },
       "liability": {
-        "title": "Limitación de responsabilidad",
-        "body": "En la medida máxima permitida por la ley, Obsydia no es responsable por daños indirectos, incidentales, especiales, consecuentes, ejemplares o punitivos, incluyendo pérdida de datos, ganancias o uso, ya sea por contrato, agravio, negligencia o responsabilidad estricta. La responsabilidad se limita a las cantidades pagadas por el servicio que dio origen al reclamo."
+        "title": "Limitaci\u00f3n de responsabilidad",
+        "body": "En la medida m\u00e1xima permitida por la ley, Obsydia no es responsable por da\u00f1os indirectos, incidentales, especiales, consecuentes, ejemplares o punitivos, incluyendo p\u00e9rdida de datos, ganancias o uso, ya sea por contrato, agravio, negligencia o responsabilidad estricta. La responsabilidad se limita a las cantidades pagadas por el servicio que dio origen al reclamo."
       },
       "indemnity": {
-        "title": "Indemnización",
-        "body": "Usted acepta defender, indemnizar y mantener indemne a Obsydia por reclamaciones, daños, pérdidas, responsabilidades y gastos (incluyendo honorarios de abogados) que surjan de su uso de los servicios, su contenido o su violación de la ley."
+        "title": "Indemnizaci\u00f3n",
+        "body": "Usted acepta defender, indemnizar y mantener indemne a Obsydia por reclamaciones, da\u00f1os, p\u00e9rdidas, responsabilidades y gastos (incluyendo honorarios de abogados) que surjan de su uso de los servicios, su contenido o su violaci\u00f3n de la ley."
       },
       "release": {
-        "title": "Liberación y resolución de disputas",
-        "body": "Al usar nuestros servicios, usted acepta liberar y mantener indemne a Obsydia ante reclamaciones relacionadas con pérdida de datos, interrupciones del servicio, software de terceros o problemas del equipo, y acepta no iniciar acciones legales ni demandas colectivas contra Obsydia, en la medida máxima permitida por la ley. Por favor contáctenos primero para resolver cualquier situación."
+        "title": "Liberaci\u00f3n y resoluci\u00f3n de disputas",
+        "body": "Al usar nuestros servicios, usted acepta liberar y mantener indemne a Obsydia ante reclamaciones relacionadas con p\u00e9rdida de datos, interrupciones del servicio, software de terceros o problemas del equipo, y acepta no iniciar acciones legales ni demandas colectivas contra Obsydia, en la medida m\u00e1xima permitida por la ley. Por favor cont\u00e1ctenos primero para resolver cualquier situaci\u00f3n."
       },
       "force": {
         "title": "Fuerza mayor",
         "body": "Obsydia no es responsable por retrasos o incumplimientos causados por eventos fuera de nuestro control razonable, incluyendo tormentas, apagones, problemas de suministro o actos del gobierno."
       },
       "changes": {
-        "title": "Cambios a estos términos",
-        "body": "Podemos actualizar estos términos en cualquier momento. El uso continuo del sitio o de los servicios constituye aceptación de los términos actualizados."
+        "title": "Cambios a estos t\u00e9rminos",
+        "body": "Podemos actualizar estos t\u00e9rminos en cualquier momento. El uso continuo del sitio o de los servicios constituye aceptaci\u00f3n de los t\u00e9rminos actualizados."
       },
       "law": {
         "title": "Ley aplicable",
-        "body": "Estos términos se rigen por las leyes de Puerto Rico y las leyes federales aplicables de Estados Unidos."
+        "body": "Estos t\u00e9rminos se rigen por las leyes de Puerto Rico y las leyes federales aplicables de Estados Unidos."
       }
     }
   },
@@ -178,67 +137,6 @@
     "audio": "Reproductor de audiolibros en una interfaz oscura",
     "ownership": "Iconos de escudo y almacenamiento que simbolizan propiedad de datos",
     "built": "Hardware de servidor personalizado en un banco de trabajo",
-    "prHome": "Configuración de hogar en Puerto Rico con un servidor compacto"
-  },
-  "errors": {
-    "required": "Complete todos los campos requeridos.",
-    "email": "Ingrese un correo electrónico válido.",
-    "services": "Seleccione al menos un servicio.",
-    "phone": "Ingrese un número de teléfono.",
-    "address": "Ingrese una dirección de envío.",
-    "notes": "Mantenga las notas en 1000 caracteres o menos.",
-    "length": "Acorte los datos ingresados.",
-    "server": "Ocurrió un error al enviar su orden. Inténtelo de nuevo.",
-    "network": "No se pudo conectar. Revise su conexión e inténtelo de nuevo."
-  },
-  "email": {
-    "customerSubject": "Su orden de servidor Obsydia",
-    "adminSubject": "Nueva orden de Obsydia Retail: {{name}}",
-    "intro": "Gracias por su orden. Este es su resumen:",
-    "adminIntro": "Se ha recibido una nueva orden.",
-    "summaryTitle": "Resumen de la orden",
-    "servicesTitle": "Servicios seleccionados",
-    "paymentTitle": "Cotización y próximos pasos",
-    "paymentInstructions": "Estamos revisando su solicitud y le enviaremos una cotización con el precio final e instrucciones de pago. Aún no se requiere pago.",
-    "termsLabel": "Términos de servicio",
-    "termsLine": "Al enviar su orden, usted acepta nuestros Términos de servicio: {{termsUrl}}",
-    "nextSteps": "Nos comunicaremos si necesitamos información adicional.",
-    "noServices": "No se seleccionaron servicios.",
-    "noNotes": "No se indicaron notas.",
-    "notProvided": "No provisto",
-    "labels": {
-      "name": "Nombre completo",
-      "email": "Correo electrónico",
-      "phone": "Teléfono",
-      "address": "Dirección de envío",
-      "location": "Ubicación",
-      "notes": "Notas",
-      "language": "Idioma",
-      "orderId": "ID de orden",
-      "timestamp": "Enviado"
-    }
-  },
-  "quote": {
-    "subject": "Cotización de Obsydia para la orden {{orderId}}",
-    "intro": "Aquí está su cotización para su servidor personalizado.",
-    "itemsTitle": "Precio detallado",
-    "totalLabel": "Total",
-    "currencyNote": "Todos los precios están en USD.",
-    "paymentTitle": "Instrucciones de pago",
-    "paymentInstructions": "Por favor realice el pago vía ATH Móvil al {{paymentNumber}} e incluya su ID de orden {{orderId}} en la descripción del pago.",
-    "orderIdLabel": "ID de orden",
-    "notesLabel": "Notas",
-    "outro": "Una vez se confirme el pago, comenzaremos la construcción y enviaremos el servidor a la dirección provista.",
-    "termsLabel": "Términos de servicio",
-    "termsLine": "Al continuar, usted acepta nuestros Términos de servicio: {{termsUrl}}",
-    "items": {
-      "pc": "PC base",
-      "jellyfin": "Streaming de películas y música",
-      "immich": "Almacenamiento y respaldo de fotos",
-      "kavita": "Biblioteca de ebooks y cómics",
-      "audiobookshelf": "Streaming de audiolibros y podcasts",
-      "extra-storage": "Almacenamiento extra (disco externo)",
-      "other": "Otro"
-    }
+    "prHome": "Configuraci\u00f3n de hogar en Puerto Rico con un servidor compacto"
   }
 }

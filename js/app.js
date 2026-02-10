@@ -10,11 +10,6 @@ const state = {
 
 const elements = {
   langButtons: document.querySelectorAll('[data-lang]'),
-  languageField: document.getElementById('language-field'),
-  orderForm: document.getElementById('order-form'),
-  orderSection: document.getElementById('order'),
-  status: document.getElementById('form-status'),
-  submitButton: document.querySelector('#order-form button[type="submit"]'),
 };
 
 function resolvePath(obj, path) {
@@ -26,7 +21,7 @@ async function loadTranslations(lang) {
     return state.translations[lang];
   }
 
-  const response = await fetch(`/locales/${lang}.json?v=${assetVersion}`);
+  const response = await fetch(`locales/${lang}.json?v=${assetVersion}`);
   if (!response.ok) {
     throw new Error(`Unable to load locale ${lang}`);
   }
@@ -70,9 +65,6 @@ function applyTranslations(t) {
     document.title = title;
   }
 
-  if (elements.submitButton) {
-    elements.submitButton.dataset.defaultLabel = elements.submitButton.textContent;
-  }
 }
 
 function updateLanguageButtons(lang) {
@@ -81,21 +73,6 @@ function updateLanguageButtons(lang) {
     button.classList.toggle('is-active', isActive);
     button.setAttribute('aria-pressed', isActive);
   });
-}
-
-function setSubmitting(isSubmitting, t) {
-  if (!elements.submitButton) {
-    return;
-  }
-
-  if (!elements.submitButton.dataset.defaultLabel) {
-    elements.submitButton.dataset.defaultLabel = elements.submitButton.textContent;
-  }
-
-  elements.submitButton.textContent = isSubmitting
-    ? resolvePath(t, 'order.submitting') || elements.submitButton.dataset.defaultLabel
-    : elements.submitButton.dataset.defaultLabel;
-  elements.submitButton.disabled = isSubmitting;
 }
 
 async function setLanguage(lang) {
@@ -109,10 +86,6 @@ async function setLanguage(lang) {
 
   applyTranslations(translations);
   updateLanguageButtons(normalized);
-
-  if (elements.languageField) {
-    elements.languageField.value = normalized;
-  }
 
   return translations;
 }
@@ -150,73 +123,6 @@ function setupLanguageSelector() {
   });
 }
 
-function setupOrderForm() {
-  if (!elements.orderForm) {
-    return;
-  }
-
-  elements.orderForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const translations = state.currentTranslations;
-    if (!translations) {
-      return;
-    }
-
-    elements.status.textContent = '';
-    elements.status.classList.remove('is-success');
-    setSubmitting(true, translations);
-
-    const formData = new FormData(elements.orderForm);
-    const services = Array.from(
-      elements.orderForm.querySelectorAll('input[name="services"]:checked')
-    ).map((input) => input.value);
-
-    const payload = {
-      fullName: formData.get('fullName')?.trim(),
-      email: formData.get('email')?.trim(),
-      phone: formData.get('phone')?.trim(),
-      address: formData.get('address')?.trim(),
-      location: formData.get('location')?.trim(),
-      notes: formData.get('notes')?.trim(),
-      services,
-      language: state.lang,
-    };
-
-    try {
-      const response = await fetch('/order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-
-      const result = await response.json();
-      if (!response.ok) {
-        elements.status.textContent = result.message || translations.errors.server;
-        elements.status.classList.remove('is-success');
-        setSubmitting(false, translations);
-        return;
-      }
-
-      elements.orderForm.reset();
-      if (elements.languageField) {
-        elements.languageField.value = state.lang;
-      }
-
-      elements.status.textContent =
-        result.message || resolvePath(translations, 'order.success') || '';
-      elements.status.classList.add('is-success');
-      elements.orderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } catch (error) {
-      elements.status.textContent = translations.errors.network;
-      elements.status.classList.remove('is-success');
-    } finally {
-      setSubmitting(false, translations);
-    }
-  });
-}
-
 async function init() {
   const storedLanguage = localStorage.getItem('lang') || 'en';
 
@@ -227,7 +133,6 @@ async function init() {
   }
 
   setupLanguageSelector();
-  setupOrderForm();
   initRevealAnimations();
 }
 

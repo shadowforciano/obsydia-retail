@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Obsydia Retail</title>
-    <link rel="icon" type="image/png" href="/images/ownership.png" />
-    <link rel="apple-touch-icon" href="/images/ownership.png" />
-    <link rel="stylesheet" href="/css/styles.css?v=20250101" />
-    <script defer src="/js/app.js?v=20250101"></script>
+    <link rel="icon" type="image/png" href="images/ownership.png" />
+    <link rel="apple-touch-icon" href="images/ownership.png" />
+    <link rel="stylesheet" href="css/styles.css?v=20250101" />
+    <script defer src="js/app.js?v=20250101"></script>
   </head>
   <body>
     <header class="site-header">
@@ -32,13 +32,13 @@
             Obsydia builds mini personal servers for streaming, photos, ebooks, and audiobooks, configured for your home in Puerto Rico.
           </p>
           <div class="hero-actions">
-            <a class="btn primary" href="#order" data-i18n="hero.cta">Start your build</a>
-            <span class="tag" data-i18n="hero.tag">ATH Móvil payments only</span>
+            <a class="btn primary" href="#services" data-i18n="hero.cta">Explore services</a>
+            <span class="tag" data-i18n="hero.tag">Built locally in Puerto Rico</span>
           </div>
         </div>
         <div class="hero-media">
           <img
-            src="/images/hero.png"
+            src="images/hero.png"
             alt="Obsydia personal server on a desk"
             data-i18n-alt="alt.hero"
           />
@@ -53,7 +53,7 @@
         <div class="service-grid">
           <article class="service-card reveal">
             <img
-              src="/images/streaming.png"
+              src="images/streaming.png"
               alt="Streaming service interface on a dark screen"
               data-i18n-alt="alt.streaming"
             />
@@ -62,7 +62,7 @@
           </article>
           <article class="service-card reveal">
             <img
-              src="/images/photos.png"
+              src="images/photos.png"
               alt="Photo backup dashboard on a dark interface"
               data-i18n-alt="alt.photos"
             />
@@ -71,7 +71,7 @@
           </article>
           <article class="service-card reveal">
             <img
-              src="/images/books.png"
+              src="images/books.png"
               alt="Digital library shelves on a dark interface"
               data-i18n-alt="alt.books"
             />
@@ -80,7 +80,7 @@
           </article>
           <article class="service-card reveal">
             <img
-              src="/images/audio.png"
+              src="images/audio.png"
               alt="Audiobook player on a dark interface"
               data-i18n-alt="alt.audio"
             />
@@ -93,7 +93,7 @@
       <section class="feature split reveal" id="ownership">
         <div class="feature-media">
           <img
-            src="/images/ownership.png"
+            src="images/ownership.png"
             alt="Shield and storage icons symbolizing data ownership"
             data-i18n-alt="alt.ownership"
           />
@@ -114,7 +114,7 @@
       <section class="feature split reverse reveal" id="built">
         <div class="feature-media">
           <img
-            src="/images/BuiltForYou.png"
+            src="images/BuiltForYou.png"
             alt="Custom-built server hardware on a workbench"
             data-i18n-alt="alt.built"
           />
@@ -135,7 +135,7 @@
       <section class="feature split reveal" id="pr-focus">
         <div class="feature-media">
           <img
-            src="/images/PuertoRicoHomeFocused.png"
+            src="images/PuertoRicoHomeFocused.png"
             alt="Puerto Rico home setup with a compact server"
             data-i18n-alt="alt.prHome"
           />
@@ -152,97 +152,11 @@
           </ul>
         </div>
       </section>
-
-      <section class="order-section reveal" id="order">
-        <div class="section-heading">
-          <h2 data-i18n="order.title">Order your server</h2>
-          <p data-i18n="order.subtitle">Tell us what you want and we'll confirm details by email.</p>
-        </div>
-        <form id="order-form" class="order-form">
-          <input type="hidden" name="language" id="language-field" value="en" />
-          <div class="form-grid">
-            <label>
-              <span data-i18n="form.fullName">Full Name</span>
-              <input type="text" name="fullName" autocomplete="name" required data-i18n-placeholder="order.placeholders.fullName" />
-            </label>
-            <label>
-              <span data-i18n="form.email">Email</span>
-              <input type="email" name="email" autocomplete="email" required data-i18n-placeholder="order.placeholders.email" />
-            </label>
-            <label>
-              <span data-i18n="form.phone">Phone</span>
-              <input
-                type="tel"
-                name="phone"
-                autocomplete="tel"
-                required
-                data-i18n-placeholder="order.placeholders.phone"
-              />
-            </label>
-            <label>
-              <span data-i18n="form.address">Shipping Address</span>
-              <input
-                type="text"
-                name="address"
-                autocomplete="street-address"
-                required
-                data-i18n-placeholder="order.placeholders.address"
-              />
-            </label>
-            <label>
-              <span data-i18n="form.location">Location</span>
-              <input type="text" name="location" autocomplete="address-level2" required data-i18n-placeholder="order.placeholders.location" />
-            </label>
-          </div>
-
-          <div class="form-section">
-            <span class="form-label" data-i18n="order.servicesLabel">Select services</span>
-            <div class="checkbox-grid">
-              <label class="checkbox">
-                <input type="checkbox" name="services" value="jellyfin" />
-                <span data-i18n="services.items.jellyfin.name">Movie &amp; Music Streaming</span>
-              </label>
-              <label class="checkbox">
-                <input type="checkbox" name="services" value="immich" />
-                <span data-i18n="services.items.immich.name">Photo Storage &amp; Backup</span>
-              </label>
-              <label class="checkbox">
-                <input type="checkbox" name="services" value="kavita" />
-                <span data-i18n="services.items.kavita.name">Ebooks &amp; Comics Library</span>
-              </label>
-              <label class="checkbox">
-                <input type="checkbox" name="services" value="audiobookshelf" />
-                <span data-i18n="services.items.audiobookshelf.name">Audiobook &amp; Podcast Streaming</span>
-              </label>
-              <label class="checkbox">
-                <input type="checkbox" name="services" value="extra-storage" />
-                <span data-i18n="services.items.extra-storage.name">Extra Storage (External Drive)</span>
-              </label>
-            </div>
-          </div>
-
-          <label class="textarea">
-            <span data-i18n="form.notes">Notes</span>
-            <textarea name="notes" rows="4" data-i18n-placeholder="order.placeholders.notes"></textarea>
-          </label>
-
-          <p class="estimate-note" data-i18n="order.estimateNote">
-            Estimate: new builds typically start around $140. BYOD (bring your own device) is welcome with at least 8 GB RAM and enough storage for the GB you expect to use. External drives can be added when supported.
-          </p>
-          <p class="payment-note" data-i18n="order.paymentNote">
-            ATH Móvil only. Payment instructions are emailed after you submit.
-          </p>
-          <p class="disclaimer" data-i18n="order.disclaimer">We will email you to confirm details and timeline.</p>
-          <p class="form-status" id="form-status" role="status"></p>
-          <button class="btn primary" type="submit" data-i18n="order.submit">Submit order</button>
-        </form>
-      </section>
-
     </main>
 
     <footer class="site-footer">
-      <p data-i18n="footer.note">Questions? We'll reach out by email after you submit.</p>
-      <a class="terms-link" href="/terms" data-i18n="footer.terms">Terms of Service</a>
+      <p data-i18n="footer.note">Questions? Review the services and terms for details.</p>
+      <a class="terms-link" href="terms.html" data-i18n="footer.terms">Terms of Service</a>
     </footer>
   </body>
 </html>
