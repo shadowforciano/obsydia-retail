@@ -173,6 +173,7 @@
         },
         "windows": {
           "title": "Windows (10/11)",
+          "directDownload": "Descarga directa: Instalador de Docker Desktop (Windows 64-bit)",
           "steps": [
             "Descargue el instalador de Windows desde la p\u00e1gina oficial.",
             "Ejecute el instalador y deje activada la opci\u00f3n de WSL 2 si se le solicita.",
