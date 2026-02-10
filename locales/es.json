@@ -67,7 +67,89 @@
   },
   "footer": {
     "note": "\u00bfPreguntas? Revise los servicios y t\u00e9rminos para m\u00e1s detalles.",
-    "terms": "T\u00e9rminos de servicio"
+    "terms": "T\u00e9rminos de servicio",
+    "kb": "Base de conocimientos"
+  },
+  "kb": {
+    "back": "Volver al inicio",
+    "title": "Base de conocimientos",
+    "intro": "Gu\u00edas y pasos para instalaci\u00f3n y mantenimiento.",
+    "articles": {
+      "rustdesk": {
+        "title": "Instalar RustDesk (Soporte remoto)",
+        "summary": "Instrucciones paso a paso para descargar e instalar RustDesk en Windows, macOS, Linux, Android y iOS.",
+        "cta": "Leer art\u00edculo"
+      }
+    },
+    "rustdesk": {
+      "back": "Volver a la Base de conocimientos",
+      "title": "Instalar RustDesk",
+      "updated": "\u00daltima actualizaci\u00f3n: 10 feb 2026",
+      "intro": "RustDesk es una aplicaci\u00f3n de escritorio remoto para soporte y acceso entre dispositivos.",
+      "links": {
+        "website": "Sitio oficial de RustDesk",
+        "github": "Releases de GitHub de RustDesk",
+        "docs": "Documentaci\u00f3n del cliente RustDesk",
+        "appstore": "RustDesk en el App Store"
+      },
+      "sections": {
+        "sources": {
+          "title": "Descargue desde fuentes oficiales",
+          "body": "Use el sitio oficial de RustDesk o las releases de GitHub para evitar instaladores falsos."
+        },
+        "windows": {
+          "title": "Windows (10/11)",
+          "steps": [
+            "Descargue el instalador de Windows (.exe o .msi) desde GitHub releases.",
+            "Abra el archivo y siga las instrucciones del instalador.",
+            "Abra RustDesk y permita el acceso al firewall si se lo solicita.",
+            "Comparta su ID y contrase\u00f1a de un solo uso con la persona que le ayuda."
+          ]
+        },
+        "macos": {
+          "title": "macOS",
+          "steps": [
+            "Descargue el .dmg de macOS desde GitHub releases.",
+            "Abra el .dmg y arrastre RustDesk a Aplicaciones.",
+            "Si macOS lo bloquea, vaya a Configuraci\u00f3n del Sistema > Privacidad y seguridad y permita abrirlo.",
+            "Otorgue permisos de Accesibilidad, Grabaci\u00f3n de pantalla y Monitoreo de entrada cuando se le solicite."
+          ]
+        },
+        "linux": {
+          "title": "Linux",
+          "steps": [
+            "Descargue el paquete para su distribuci\u00f3n (.deb, .rpm o AppImage) desde GitHub releases.",
+            "Inst\u00e1lelo usando su centro de software o gestor de paquetes.",
+            "Abra RustDesk desde el men\u00fa de aplicaciones.",
+            "Permita los permisos solicitados para el control de pantalla."
+          ]
+        },
+        "android": {
+          "title": "Android",
+          "steps": [
+            "Descargue el APK de Android desde GitHub releases.",
+            "Abra el APK y permita la instalaci\u00f3n desde esa fuente si se le solicita.",
+            "Abra RustDesk y anote su ID y contrase\u00f1a."
+          ]
+        },
+        "ios": {
+          "title": "iPhone / iPad",
+          "steps": [
+            "Instale la app y \u00e1brala.",
+            "Puede controlar otros dispositivos desde iOS, pero los dispositivos iOS no pueden ser controlados."
+          ]
+        },
+        "safety": {
+          "title": "Primera conexi\u00f3n y seguridad",
+          "steps": [
+            "Solo comparta su ID y contrase\u00f1a de un solo uso con personas de confianza.",
+            "Si no solicit\u00f3 ayuda, cierre la app y no comparta su c\u00f3digo.",
+            "Finalice la sesi\u00f3n cuando termine el soporte."
+          ],
+          "note": "RustDesk muestra una contrase\u00f1a nueva cada vez que se inicia. Esto ayuda a evitar accesos no autorizados."
+        }
+      }
+    }
   },
   "terms": {
     "back": "Volver al inicio",

@@ -297,6 +297,13 @@ p {
   padding: 40px 24px 80px;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
 .terms-link,
 .terms-back {
   color: var(--accent-strong);
@@ -304,7 +311,8 @@ p {
   text-underline-offset: 4px;
 }
 
-.terms-page {
+.terms-page,
+.kb-page {
   max-width: 900px;
   margin: 0 auto;
   padding: 32px 24px 80px;
@@ -314,13 +322,15 @@ p {
   margin-bottom: 32px;
 }
 
-.terms-page h1 {
+.terms-page h1,
+.kb-page h1 {
   font-family: var(--font-display);
   font-size: clamp(2rem, 3vw, 2.6rem);
   margin: 12px 0;
 }
 
-.terms-page h2 {
+.terms-page h2,
+.kb-page h2 {
   font-size: 1.2rem;
   margin: 0 0 12px;
 }
@@ -337,6 +347,37 @@ p {
   padding: 20px 24px;
   margin-bottom: 16px;
   box-shadow: var(--shadow);
+}
+
+.kb-list {
+  display: grid;
+  gap: 16px;
+}
+
+.kb-card {
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+}
+
+.kb-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.kb-steps {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+}
+
+.kb-note {
+  font-size: 0.95rem;
+  color: var(--muted);
 }
 
 .js .reveal {

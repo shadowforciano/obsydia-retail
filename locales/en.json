@@ -67,7 +67,89 @@
   },
   "footer": {
     "note": "Questions? Review the services and terms for details.",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "kb": "Knowledge Base"
+  },
+  "kb": {
+    "back": "Back to home",
+    "title": "Knowledge Base",
+    "intro": "Guides and how-tos for setup and maintenance.",
+    "articles": {
+      "rustdesk": {
+        "title": "Install RustDesk (Remote Support)",
+        "summary": "Step-by-step instructions to download and install RustDesk on Windows, macOS, Linux, Android, and iOS.",
+        "cta": "Read article"
+      }
+    },
+    "rustdesk": {
+      "back": "Back to Knowledge Base",
+      "title": "Install RustDesk",
+      "updated": "Last updated: Feb 10, 2026",
+      "intro": "RustDesk is a remote desktop app used for support and access across devices.",
+      "links": {
+        "website": "RustDesk official website",
+        "github": "RustDesk GitHub releases",
+        "docs": "RustDesk client documentation",
+        "appstore": "RustDesk on the App Store"
+      },
+      "sections": {
+        "sources": {
+          "title": "Download from official sources",
+          "body": "Use the official RustDesk site or GitHub releases to avoid fake installers."
+        },
+        "windows": {
+          "title": "Windows (10/11)",
+          "steps": [
+            "Download the Windows installer (.exe or .msi) from GitHub releases.",
+            "Open the file and follow the installer prompts.",
+            "Launch RustDesk and allow firewall access if prompted.",
+            "Share your ID and one-time password with the person helping you."
+          ]
+        },
+        "macos": {
+          "title": "macOS",
+          "steps": [
+            "Download the macOS .dmg from GitHub releases.",
+            "Open the .dmg and drag RustDesk into Applications.",
+            "If macOS blocks it, go to System Settings > Privacy & Security and allow it to open.",
+            "Grant Accessibility, Screen Recording, and Input Monitoring permissions when prompted."
+          ]
+        },
+        "linux": {
+          "title": "Linux",
+          "steps": [
+            "Download the package for your distro (.deb, .rpm, or AppImage) from GitHub releases.",
+            "Install it using your software center or package manager.",
+            "Launch RustDesk from your applications menu.",
+            "Allow any requested permissions for screen control."
+          ]
+        },
+        "android": {
+          "title": "Android",
+          "steps": [
+            "Download the Android APK from GitHub releases.",
+            "Open the APK and allow installation from this source if prompted.",
+            "Open RustDesk and note your ID and password."
+          ]
+        },
+        "ios": {
+          "title": "iPhone / iPad",
+          "steps": [
+            "Install the app and open it.",
+            "You can control other devices from iOS, but iOS devices cannot be controlled."
+          ]
+        },
+        "safety": {
+          "title": "First connection and safety",
+          "steps": [
+            "Only share your RustDesk ID and one-time password with people you trust.",
+            "If you did not request help, close the app and do not share your code.",
+            "End the session when support is finished."
+          ],
+          "note": "RustDesk shows a new password each time it starts. This helps prevent unwanted access."
+        }
+      }
+    }
   },
   "terms": {
     "back": "Back to home",
