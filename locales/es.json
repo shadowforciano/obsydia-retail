@@ -105,6 +105,7 @@
         },
         "windows": {
           "title": "Windows (10/11)",
+          "directDownload": "Descarga directa: RustDesk 1.4.5 (Windows 64-bit)",
           "steps": [
             "Descargue el instalador de Windows (.exe o .msi) desde GitHub releases.",
             "Abra el archivo y siga las instrucciones del instalador.",
