@@ -84,6 +84,11 @@
         "title": "Instalar Docker Desktop",
         "summary": "Instrucciones simples para instalar Docker Desktop en Windows o macOS y verificar que est\u00e1 funcionando.",
         "cta": "Leer art\u00edculo"
+      },
+      "prowlarr": {
+        "title": "Herramientas de Prowlarr y soluci\u00f3n de indexers",
+        "summary": "Resumen del stack con pasos para configurar y solucionar indexers.",
+        "cta": "Leer art\u00edculo"
       }
     },
     "rustdesk": {
@@ -202,6 +207,70 @@
           "title": "Nota sobre Linux",
           "body": "Docker Desktop es para Windows y macOS. En Linux, instale Docker Engine con el gestor de paquetes de su distribuci\u00f3n."
         }
+      }
+    },
+    "prowlarr": {
+      "back": "Volver a la Base de conocimientos",
+      "title": "Herramientas de Prowlarr y soluci\u00f3n de indexers",
+      "updated": "\u00daltima actualizaci\u00f3n: 10 feb 2026",
+      "intro": "Esta gu\u00eda explica las herramientas principales y c\u00f3mo agregar o solucionar indexers en Prowlarr.",
+      "sections": {
+        "stack": {
+          "title": "Resumen del stack",
+          "body": "Estas herramientas trabajan juntas para encontrar contenido y enviarlo a la app correcta."
+        },
+        "addIndexer": {
+          "title": "C\u00f3mo agregar indexers en Prowlarr",
+          "body": "Use estos pasos para agregar un indexer y probarlo antes de guardar.",
+          "steps": [
+            "Abra Prowlarr y vaya a Indexers.",
+            "Haga clic en Add Indexer y elija el proveedor.",
+            "Pegue la API key y la base URL del indexer.",
+            "Haga clic en Test y luego Save si funciona."
+          ]
+        },
+        "troubleshoot": {
+          "title": "Si un indexer falla",
+          "body": "La mayor\u00eda de fallas se corrigen cambiando la base URL o usando otro indexer.",
+          "steps": [
+            "Si un indexer falla, cambie la base URL y pruebe otra vez.",
+            "Si sigue fallando, use un indexer diferente.",
+            "Si todos fallan, verifique que la API key y las credenciales sean correctas.",
+            "Intente m\u00e1s tarde por si el indexer est\u00e1 temporalmente ca\u00eddo."
+          ]
+        }
+      },
+      "tools": {
+        "prowlarr": {
+          "title": "Prowlarr (Indexers)",
+          "body": "Lugar central para administrar indexers y enviar resultados a Sonarr/Radarr."
+        },
+        "sonarr": {
+          "title": "Sonarr (TV)",
+          "body": "Administra series y env\u00eda b\u00fasquedas a los indexers."
+        },
+        "radarr": {
+          "title": "Radarr (Pel\u00edculas)",
+          "body": "Administra pel\u00edculas y env\u00eda b\u00fasquedas a los indexers."
+        },
+        "qbit": {
+          "title": "qBittorrent",
+          "body": "Cliente de descargas que recibe archivos de Sonarr/Radarr."
+        }
+      },
+      "images": {
+        "prowlarrMain": "P\u00e1gina principal de Prowlarr",
+        "sonarrMain": "P\u00e1gina principal de Sonarr",
+        "radarrMain": "P\u00e1gina principal de Radarr",
+        "qbitMain": "P\u00e1gina principal de qBittorrent",
+        "addIndexerOne": "Pantalla para agregar indexer en Prowlarr",
+        "addIndexerTwo": "Prueba de indexer en Prowlarr",
+        "indexerFail": "Error de indexer en Prowlarr"
+      },
+      "captions": {
+        "addIndexerOne": "Agregue el indexer, pegue la API key y pruebe.",
+        "addIndexerTwo": "Si la prueba funciona, guarde el indexer.",
+        "indexerFail": "Cambie la base URL o use otro indexer cuando uno falle."
       }
     }
   },

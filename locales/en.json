@@ -84,6 +84,11 @@
         "title": "Install Docker Desktop",
         "summary": "Simple instructions to install Docker Desktop on Windows or macOS and verify it is running.",
         "cta": "Read article"
+      },
+      "prowlarr": {
+        "title": "Prowlarr Tools & Indexer Troubleshooting",
+        "summary": "Overview of the stack plus step-by-step indexer setup and troubleshooting.",
+        "cta": "Read article"
       }
     },
     "rustdesk": {
@@ -202,6 +207,70 @@
           "title": "Linux note",
           "body": "Docker Desktop is for Windows and macOS. On Linux, install Docker Engine using your distro's package manager."
         }
+      }
+    },
+    "prowlarr": {
+      "back": "Back to Knowledge Base",
+      "title": "Prowlarr Tools & Indexer Troubleshooting",
+      "updated": "Last updated: Feb 10, 2026",
+      "intro": "This guide explains the core tools and how to add or fix indexers in Prowlarr.",
+      "sections": {
+        "stack": {
+          "title": "Technology stack overview",
+          "body": "These tools work together to find content and send it to the right app."
+        },
+        "addIndexer": {
+          "title": "How to add indexers in Prowlarr",
+          "body": "Use these steps to add an indexer and test it before saving.",
+          "steps": [
+            "Open Prowlarr and go to Indexers.",
+            "Click Add Indexer and choose the provider.",
+            "Paste the API key and base URL from the indexer.",
+            "Click Test, then Save when it succeeds."
+          ]
+        },
+        "troubleshoot": {
+          "title": "If an indexer fails",
+          "body": "Most failures are fixed by switching the base URL or using a different indexer.",
+          "steps": [
+            "If one indexer fails, switch the base URL and test again.",
+            "If it still fails, try a different indexer.",
+            "If all indexers fail, check that your API key and credentials are correct.",
+            "Try again later in case the indexer is temporarily down."
+          ]
+        }
+      },
+      "tools": {
+        "prowlarr": {
+          "title": "Prowlarr (Indexers)",
+          "body": "Central place to manage indexers and push results to Sonarr/Radarr."
+        },
+        "sonarr": {
+          "title": "Sonarr (TV)",
+          "body": "Manages TV series and sends search requests to indexers."
+        },
+        "radarr": {
+          "title": "Radarr (Movies)",
+          "body": "Manages movies and sends search requests to indexers."
+        },
+        "qbit": {
+          "title": "qBittorrent",
+          "body": "Download client that receives files from Sonarr/Radarr."
+        }
+      },
+      "images": {
+        "prowlarrMain": "Prowlarr main page",
+        "sonarrMain": "Sonarr main page",
+        "radarrMain": "Radarr main page",
+        "qbitMain": "qBittorrent main page",
+        "addIndexerOne": "Prowlarr add indexer screen",
+        "addIndexerTwo": "Prowlarr add indexer test",
+        "indexerFail": "Prowlarr indexer error"
+      },
+      "captions": {
+        "addIndexerOne": "Add the indexer, paste the API key, then test.",
+        "addIndexerTwo": "If the test succeeds, save the indexer.",
+        "indexerFail": "Switch base URL or use another indexer when one fails."
       }
     }
   },

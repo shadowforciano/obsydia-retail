@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" data-asset-version="20250101" data-locale-base="../locales/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Obsydia Server</title>
+    <link rel="icon" type="image/png" href="../images/ownership.png" />
+    <link rel="apple-touch-icon" href="../images/ownership.png" />
+    <link rel="stylesheet" href="../css/styles.css?v=20250101" />
+    <script defer src="../js/app.js?v=20250101"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" data-i18n="app.brand">Obsydia</a>
+      <div class="lang-switch" aria-label="Language selector" data-i18n-aria-label="language.ariaLabel">
+        <span class="lang-label" data-i18n="language.label">Language</span>
+        <button class="lang-btn" type="button" data-lang="en" data-i18n="language.en" aria-pressed="false">
+          EN
+        </button>
+        <button class="lang-btn" type="button" data-lang="es" data-i18n="language.es" aria-pressed="false">
+          ES
+        </button>
+      </div>
+    </header>
+
+    <main class="kb-page">
+      <div class="terms-header">
+        <a class="terms-back" href="index.html" data-i18n="kb.prowlarr.back">Back to Knowledge Base</a>
+        <h1 data-i18n="kb.prowlarr.title">Prowlarr Tools &amp; Indexer Troubleshooting</h1>
+        <p class="terms-updated" data-i18n="kb.prowlarr.updated">Last updated: Feb 10, 2026</p>
+        <p data-i18n="kb.prowlarr.intro">
+          This guide explains the core tools and how to add or fix indexers in Prowlarr.
+        </p>
+      </div>
+
+      <section class="terms-card">
+        <h2 data-i18n="kb.prowlarr.sections.stack.title">Technology stack overview</h2>
+        <p data-i18n="kb.prowlarr.sections.stack.body">
+          These tools work together to find content and send it to the right app.
+        </p>
+        <div class="kb-tool-grid">
+          <article class="kb-tool-card">
+            <img
+              src="../images/Prowlarr%20Main%20Page.png"
+              alt="Prowlarr main page"
+              data-i18n-alt="kb.prowlarr.images.prowlarrMain"
+            />
+            <h3 data-i18n="kb.prowlarr.tools.prowlarr.title">Prowlarr (Indexers)</h3>
+            <p data-i18n="kb.prowlarr.tools.prowlarr.body">
+              Central place to manage indexers and push results to Sonarr/Radarr.
+            </p>
+          </article>
+          <article class="kb-tool-card">
+            <img
+              src="../images/Sonarr%20main%20page.png"
+              alt="Sonarr main page"
+              data-i18n-alt="kb.prowlarr.images.sonarrMain"
+            />
+            <h3 data-i18n="kb.prowlarr.tools.sonarr.title">Sonarr (TV)</h3>
+            <p data-i18n="kb.prowlarr.tools.sonarr.body">
+              Manages TV series and sends search requests to indexers.
+            </p>
+          </article>
+          <article class="kb-tool-card">
+            <img
+              src="../images/Radarr%20Main%20Page.png"
+              alt="Radarr main page"
+              data-i18n-alt="kb.prowlarr.images.radarrMain"
+            />
+            <h3 data-i18n="kb.prowlarr.tools.radarr.title">Radarr (Movies)</h3>
+            <p data-i18n="kb.prowlarr.tools.radarr.body">
+              Manages movies and sends search requests to indexers.
+            </p>
+          </article>
+          <article class="kb-tool-card">
+            <img
+              src="../images/qBitTorrent%20main%20page.png"
+              alt="qBittorrent main page"
+              data-i18n-alt="kb.prowlarr.images.qbitMain"
+            />
+            <h3 data-i18n="kb.prowlarr.tools.qbit.title">qBittorrent</h3>
+            <p data-i18n="kb.prowlarr.tools.qbit.body">
+              Download client that receives files from Sonarr/Radarr.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="terms-card">
+        <h2 data-i18n="kb.prowlarr.sections.addIndexer.title">How to add indexers in Prowlarr</h2>
+        <p data-i18n="kb.prowlarr.sections.addIndexer.body">
+          Use these steps to add an indexer and test it before saving.
+        </p>
+        <ol class="kb-steps">
+          <li data-i18n="kb.prowlarr.sections.addIndexer.steps.0">Open Prowlarr and go to Indexers.</li>
+          <li data-i18n="kb.prowlarr.sections.addIndexer.steps.1">Click Add Indexer and choose the provider.</li>
+          <li data-i18n="kb.prowlarr.sections.addIndexer.steps.2">Paste the API key and base URL from the indexer.</li>
+          <li data-i18n="kb.prowlarr.sections.addIndexer.steps.3">Click Test, then Save when it succeeds.</li>
+        </ol>
+        <div class="kb-media">
+          <figure>
+            <img
+              src="../images/Prowlarr%20How%20Add%20Indexer.png"
+              alt="Prowlarr add indexer screen"
+              data-i18n-alt="kb.prowlarr.images.addIndexerOne"
+            />
+            <figcaption class="kb-caption" data-i18n="kb.prowlarr.captions.addIndexerOne">
+              Add the indexer, paste the API key, then test.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="../images/Prowlarr%20How%20Add%20Indexer%202.png"
+              alt="Prowlarr add indexer test"
+              data-i18n-alt="kb.prowlarr.images.addIndexerTwo"
+            />
+            <figcaption class="kb-caption" data-i18n="kb.prowlarr.captions.addIndexerTwo">
+              If the test succeeds, save the indexer.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="terms-card">
+        <h2 data-i18n="kb.prowlarr.sections.troubleshoot.title">If an indexer fails</h2>
+        <p data-i18n="kb.prowlarr.sections.troubleshoot.body">
+          Most failures are fixed by switching the base URL or using a different indexer.
+        </p>
+        <ol class="kb-steps">
+          <li data-i18n="kb.prowlarr.sections.troubleshoot.steps.0">If one indexer fails, switch the base URL and test again.</li>
+          <li data-i18n="kb.prowlarr.sections.troubleshoot.steps.1">If it still fails, try a different indexer.</li>
+          <li data-i18n="kb.prowlarr.sections.troubleshoot.steps.2">If all indexers fail, check that your API key and credentials are correct.</li>
+          <li data-i18n="kb.prowlarr.sections.troubleshoot.steps.3">Try again later in case the indexer is temporarily down.</li>
+        </ol>
+        <figure class="kb-media">
+          <img
+            src="../images/Prowlarr%20if%20adding%20indeer%20fails.png"
+            alt="Prowlarr indexer error"
+            data-i18n-alt="kb.prowlarr.images.indexerFail"
+          />
+          <figcaption class="kb-caption" data-i18n="kb.prowlarr.captions.indexerFail">
+            Switch base URL or use another indexer when one fails.
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a class="terms-link" href="../terms.html" data-i18n="footer.terms">Terms of Service</a>
+        <a class="terms-link" href="index.html" data-i18n="kb.prowlarr.back">Back to Knowledge Base</a>
+      </div>
+    </footer>
+  </body>
+</html>
