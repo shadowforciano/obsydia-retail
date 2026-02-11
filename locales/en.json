@@ -89,6 +89,11 @@
         "title": "Prowlarr Tools & Indexer Troubleshooting",
         "summary": "Overview of the stack plus step-by-step indexer setup and troubleshooting.",
         "cta": "Read article"
+      },
+      "prereq": {
+        "title": "Home Server Prerequisites",
+        "summary": "What you need before setup: hardware, internet, and placement.",
+        "cta": "Read article"
       }
     },
     "rustdesk": {
@@ -271,6 +276,38 @@
         "addIndexerOne": "Add the indexer, choose a Public base URL, then test.",
         "addIndexerTwo": "If the test succeeds, save the indexer.",
         "indexerFail": "Switch base URL or use another indexer when one fails."
+      }
+    },
+    "prereq": {
+      "back": "Back to Knowledge Base",
+      "title": "Prerequisites for a Home Server",
+      "updated": "Last updated: Feb 10, 2026",
+      "intro": "Before setup, make sure your home and hardware are ready for an always-on server.",
+      "sections": {
+        "hardware": {
+          "title": "Computer requirements",
+          "items": [
+            "A computer that can install Docker Desktop (Windows 10/11 or macOS).",
+            "Enough storage for your library and future growth.",
+            "Reliable power and ventilation."
+          ]
+        },
+        "network": {
+          "title": "Network requirements",
+          "items": [
+            "Fast home internet for smooth access and streaming.",
+            "A wired LAN connection is preferred for stability.",
+            "Place the server close to your router if possible."
+          ]
+        },
+        "location": {
+          "title": "Placement & uptime",
+          "items": [
+            "Plan for the computer to stay on all the time.",
+            "Store it in a safe, dry spot in your home.",
+            "Keep it on a solid surface with airflow."
+          ]
+        }
       }
     }
   },

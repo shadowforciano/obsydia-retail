@@ -89,6 +89,11 @@
         "title": "Herramientas de Prowlarr y soluci\u00f3n de indexers",
         "summary": "Resumen del stack con pasos para configurar y solucionar indexers.",
         "cta": "Leer art\u00edculo"
+      },
+      "prereq": {
+        "title": "Requisitos para un servidor en casa",
+        "summary": "Lo necesario antes de instalar: equipo, internet y ubicaci\u00f3n.",
+        "cta": "Leer art\u00edculo"
       }
     },
     "rustdesk": {
@@ -271,6 +276,38 @@
         "addIndexerOne": "Agregue el indexer, elija una base URL Public y pruebe.",
         "addIndexerTwo": "Si la prueba funciona, guarde el indexer.",
         "indexerFail": "Cambie la base URL o use otro indexer cuando uno falle."
+      }
+    },
+    "prereq": {
+      "back": "Volver a la Base de conocimientos",
+      "title": "Requisitos para un servidor en casa",
+      "updated": "\u00daltima actualizaci\u00f3n: 10 feb 2026",
+      "intro": "Antes de la instalaci\u00f3n, aseg\u00farese de que su hogar y equipo est\u00e9n listos para un servidor siempre encendido.",
+      "sections": {
+        "hardware": {
+          "title": "Requisitos del equipo",
+          "items": [
+            "Un equipo que pueda instalar Docker Desktop (Windows 10/11 o macOS).",
+            "Almacenamiento suficiente para su biblioteca y crecimiento futuro.",
+            "Energ\u00eda confiable y buena ventilaci\u00f3n."
+          ]
+        },
+        "network": {
+          "title": "Requisitos de red",
+          "items": [
+            "Internet r\u00e1pido en casa para un acceso fluido.",
+            "Se prefiere conexi\u00f3n LAN por cable para estabilidad.",
+            "Si es posible, coloque el servidor cerca del router."
+          ]
+        },
+        "location": {
+          "title": "Ubicaci\u00f3n y tiempo encendido",
+          "items": [
+            "Planifique que el equipo est\u00e9 encendido todo el tiempo.",
+            "Gu\u00e1rdelo en un lugar seguro y seco dentro de su hogar.",
+            "Mant\u00e9ngalo sobre una superficie firme con ventilaci\u00f3n."
+          ]
+        }
       }
     }
   },
