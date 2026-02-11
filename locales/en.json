@@ -225,7 +225,7 @@
           "steps": [
             "Open Prowlarr and go to Indexers.",
             "Click Add Indexer and choose the provider.",
-            "Paste the API key and base URL from the indexer.",
+            "Choose a base URL (prefer the ones labeled Public because they usually work right away).",
             "Click Test, then Save when it succeeds."
           ]
         },
@@ -235,7 +235,7 @@
           "steps": [
             "If one indexer fails, switch the base URL and test again.",
             "If it still fails, try a different indexer.",
-            "If all indexers fail, check that your API key and credentials are correct.",
+            "If all indexers fail, try another Public option or a different indexer.",
             "Try again later in case the indexer is temporarily down."
           ]
         }
@@ -243,7 +243,7 @@
       "tools": {
         "prowlarr": {
           "title": "Prowlarr (Indexers)",
-          "body": "Central place to manage indexers and push results to Sonarr/Radarr."
+          "body": "Central source for indexers so Sonarr and Radarr can search and work properly."
         },
         "sonarr": {
           "title": "Sonarr (TV)",
@@ -268,7 +268,7 @@
         "indexerFail": "Prowlarr indexer error"
       },
       "captions": {
-        "addIndexerOne": "Add the indexer, paste the API key, then test.",
+        "addIndexerOne": "Add the indexer, choose a Public base URL, then test.",
         "addIndexerTwo": "If the test succeeds, save the indexer.",
         "indexerFail": "Switch base URL or use another indexer when one fails."
       }

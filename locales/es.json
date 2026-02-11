@@ -225,7 +225,7 @@
           "steps": [
             "Abra Prowlarr y vaya a Indexers.",
             "Haga clic en Add Indexer y elija el proveedor.",
-            "Pegue la API key y la base URL del indexer.",
+            "Elija una base URL (prefiera las que dicen Public porque casi siempre funcionan de inmediato).",
             "Haga clic en Test y luego Save si funciona."
           ]
         },
@@ -235,7 +235,7 @@
           "steps": [
             "Si un indexer falla, cambie la base URL y pruebe otra vez.",
             "Si sigue fallando, use un indexer diferente.",
-            "Si todos fallan, verifique que la API key y las credenciales sean correctas.",
+            "Si todos fallan, pruebe otra opci\u00f3n Public o un indexer diferente.",
             "Intente m\u00e1s tarde por si el indexer est\u00e1 temporalmente ca\u00eddo."
           ]
         }
@@ -243,7 +243,7 @@
       "tools": {
         "prowlarr": {
           "title": "Prowlarr (Indexers)",
-          "body": "Lugar central para administrar indexers y enviar resultados a Sonarr/Radarr."
+          "body": "Fuente central de indexers para que Sonarr y Radarr puedan buscar y funcionar bien."
         },
         "sonarr": {
           "title": "Sonarr (TV)",
@@ -268,7 +268,7 @@
         "indexerFail": "Error de indexer en Prowlarr"
       },
       "captions": {
-        "addIndexerOne": "Agregue el indexer, pegue la API key y pruebe.",
+        "addIndexerOne": "Agregue el indexer, elija una base URL Public y pruebe.",
         "addIndexerTwo": "Si la prueba funciona, guarde el indexer.",
         "indexerFail": "Cambie la base URL o use otro indexer cuando uno falle."
       }
