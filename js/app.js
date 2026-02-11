@@ -124,6 +124,82 @@ function setupLanguageSelector() {
   });
 }
 
+function initLightbox() {
+  const triggers = document.querySelectorAll('[data-lightbox]');
+  if (triggers.length === 0) {
+    return;
+  }
+
+  let overlay = document.querySelector('.lightbox-overlay');
+  let imageEl = overlay?.querySelector('.lightbox-image');
+  let closeBtn = overlay?.querySelector('.lightbox-close');
+
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-hidden', 'true');
+
+    const content = document.createElement('div');
+    content.className = 'lightbox-content';
+
+    closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'lightbox-close';
+    closeBtn.setAttribute('aria-label', 'Close image');
+    closeBtn.textContent = '×';
+
+    imageEl = document.createElement('img');
+    imageEl.className = 'lightbox-image';
+    imageEl.alt = '';
+
+    content.appendChild(closeBtn);
+    content.appendChild(imageEl);
+    overlay.appendChild(content);
+    document.body.appendChild(overlay);
+  }
+
+  const closeOverlay = () => {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    imageEl.src = '';
+  };
+
+  const openOverlay = (src, altText) => {
+    imageEl.src = src;
+    imageEl.alt = altText || '';
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+  };
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      const img = trigger.querySelector('img');
+      const src = trigger.getAttribute('href') || img?.getAttribute('src');
+      if (!src) {
+        return;
+      }
+      openOverlay(src, img?.alt || '');
+    });
+  });
+
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+      closeOverlay();
+    }
+  });
+
+  closeBtn?.addEventListener('click', closeOverlay);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && overlay.classList.contains('is-open')) {
+      closeOverlay();
+    }
+  });
+}
+
 async function init() {
   const storedLanguage = localStorage.getItem('lang') || 'en';
 
@@ -135,6 +211,7 @@ async function init() {
 
   setupLanguageSelector();
   initRevealAnimations();
+  initLightbox();
 }
 
 window.addEventListener('load', () => {
