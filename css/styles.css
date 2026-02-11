@@ -245,6 +245,35 @@ p {
   margin: 0;
 }
 
+.contact-section {
+  display: grid;
+  gap: 24px;
+}
+
+.contact-card {
+  background: rgba(20, 28, 43, 0.9);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 8px;
+}
+
+.contact-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.contact-email {
+  font-size: 1.1rem;
+  color: var(--accent-strong);
+  font-weight: 600;
+  word-break: break-word;
+}
+
 .feature {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

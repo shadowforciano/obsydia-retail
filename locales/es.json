@@ -65,6 +65,11 @@
       "Configuraci\u00f3n simple para el d\u00eda a d\u00eda"
     ]
   },
+  "contact": {
+    "title": "Cont\u00e1ctanos",
+    "body": "\u00bfTienes preguntas o quieres empezar? Escr\u00edbenos cuando gustes.",
+    "emailLabel": "Correo"
+  },
   "footer": {
     "note": "\u00bfPreguntas? Revise los servicios y t\u00e9rminos para m\u00e1s detalles.",
     "terms": "T\u00e9rminos de servicio",

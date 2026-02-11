@@ -65,6 +65,11 @@
       "Simple setup for everyday use"
     ]
   },
+  "contact": {
+    "title": "Contact us",
+    "body": "Have questions or want to get started? Reach out anytime.",
+    "emailLabel": "Email"
+  },
   "footer": {
     "note": "Questions? Review the services and terms for details.",
     "terms": "Terms of Service",
