@@ -94,6 +94,11 @@
         "title": "Requisitos para un servidor en casa",
         "summary": "Lo necesario antes de instalar: equipo, internet y ubicaci\u00f3n.",
         "cta": "Leer art\u00edculo"
+      },
+      "faq": {
+        "title": "FAQ",
+        "summary": "Respuestas sobre uso del sistema, descargas y fuentes.",
+        "cta": "Leer art\u00edculo"
       }
     },
     "rustdesk": {
@@ -307,6 +312,26 @@
             "Gu\u00e1rdelo en un lugar seguro y seco dentro de su hogar.",
             "Mant\u00e9ngalo sobre una superficie firme con ventilaci\u00f3n."
           ]
+        }
+      }
+    },
+    "faq": {
+      "back": "Volver a la Base de conocimientos",
+      "title": "FAQ",
+      "updated": "\u00daltima actualizaci\u00f3n: 10 feb 2026",
+      "intro": "Preguntas comunes sobre el sistema de servidor en casa.",
+      "questions": {
+        "q1": {
+          "title": "\u00bfQu\u00e9 puede hacer este sistema?",
+          "body": "Es un servidor para el hogar con herramientas open-source que ayudan a organizar y reproducir (streaming) contenido obtenido legalmente. No incluyo contenido \u2014 los usuarios deciden c\u00f3mo lo utilizan."
+        },
+        "q2": {
+          "title": "\u00bfPuede descargar pel\u00edculas?",
+          "body": "El sistema incluye herramientas de descarga de uso general. Lo que el usuario descargue es completamente su responsabilidad y debe cumplir con las leyes de derechos de autor."
+        },
+        "q3": {
+          "title": "\u00bfViene con Pirate Bay u otros sitios similares?",
+          "body": "No. El sistema incluye software open-source de administraci\u00f3n. No proporciono, recomiendo ni garantizo acceso a ning\u00fan contenido o fuente espec\u00edfica."
         }
       }
     }

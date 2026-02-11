@@ -94,6 +94,11 @@
         "title": "Home Server Prerequisites",
         "summary": "What you need before setup: hardware, internet, and placement.",
         "cta": "Read article"
+      },
+      "faq": {
+        "title": "FAQ",
+        "summary": "Answers about system use, downloads, and content sources.",
+        "cta": "Read article"
       }
     },
     "rustdesk": {
@@ -307,6 +312,26 @@
             "Store it in a safe, dry spot in your home.",
             "Keep it on a solid surface with airflow."
           ]
+        }
+      }
+    },
+    "faq": {
+      "back": "Back to Knowledge Base",
+      "title": "FAQ",
+      "updated": "Last updated: Feb 10, 2026",
+      "intro": "Common questions about the home server system.",
+      "questions": {
+        "q1": {
+          "title": "What can this system do?",
+          "body": "It is a home server with open-source tools that help organize and stream legally obtained content. We do not include content — users decide how they use it."
+        },
+        "q2": {
+          "title": "Can it download movies?",
+          "body": "The system includes general-purpose download tools. What the user downloads is entirely their responsibility and must comply with copyright laws."
+        },
+        "q3": {
+          "title": "Does it come with Pirate Bay or similar sites?",
+          "body": "No. The system includes open-source management software. We do not provide, recommend, or guarantee access to any specific content or sources."
         }
       }
     }
