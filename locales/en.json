@@ -217,7 +217,7 @@
       "sections": {
         "stack": {
           "title": "Technology stack overview",
-          "body": "These tools work together to find content and send it to the right app."
+          "body": "These tools work together to manage your library and send indexer searches to the right app."
         },
         "addIndexer": {
           "title": "How to add indexers in Prowlarr",
@@ -246,16 +246,16 @@
           "body": "Central source for indexers so Sonarr and Radarr can search and work properly."
         },
         "sonarr": {
-          "title": "Sonarr (TV)",
-          "body": "Manages TV series and sends search requests to indexers."
+          "title": "Sonarr (Automation)",
+          "body": "Monitors your library and sends search requests to indexers."
         },
         "radarr": {
-          "title": "Radarr (Movies)",
-          "body": "Manages movies and sends search requests to indexers."
+          "title": "Radarr (Automation)",
+          "body": "Monitors your library and sends search requests to indexers."
         },
         "qbit": {
           "title": "qBittorrent",
-          "body": "Download client that receives files from Sonarr/Radarr."
+          "body": "Download client that receives files from connected apps."
         }
       },
       "images": {

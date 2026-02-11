@@ -36,7 +36,7 @@
       <section class="terms-card">
         <h2 data-i18n="kb.prowlarr.sections.stack.title">Technology stack overview</h2>
         <p data-i18n="kb.prowlarr.sections.stack.body">
-          These tools work together to find content and send it to the right app.
+          These tools work together to manage your library and send indexer searches to the right app.
         </p>
         <div class="kb-tool-grid">
           <article class="kb-tool-card">
@@ -56,9 +56,9 @@
               alt="Sonarr main page"
               data-i18n-alt="kb.prowlarr.images.sonarrMain"
             />
-            <h3 data-i18n="kb.prowlarr.tools.sonarr.title">Sonarr (TV)</h3>
+            <h3 data-i18n="kb.prowlarr.tools.sonarr.title">Sonarr (Automation)</h3>
             <p data-i18n="kb.prowlarr.tools.sonarr.body">
-              Manages TV series and sends search requests to indexers.
+              Monitors your library and sends search requests to indexers.
             </p>
           </article>
           <article class="kb-tool-card">
@@ -67,9 +67,9 @@
               alt="Radarr main page"
               data-i18n-alt="kb.prowlarr.images.radarrMain"
             />
-            <h3 data-i18n="kb.prowlarr.tools.radarr.title">Radarr (Movies)</h3>
+            <h3 data-i18n="kb.prowlarr.tools.radarr.title">Radarr (Automation)</h3>
             <p data-i18n="kb.prowlarr.tools.radarr.body">
-              Manages movies and sends search requests to indexers.
+              Monitors your library and sends search requests to indexers.
             </p>
           </article>
           <article class="kb-tool-card">
@@ -80,7 +80,7 @@
             />
             <h3 data-i18n="kb.prowlarr.tools.qbit.title">qBittorrent</h3>
             <p data-i18n="kb.prowlarr.tools.qbit.body">
-              Download client that receives files from Sonarr/Radarr.
+              Download client that receives files from connected apps.
             </p>
           </article>
         </div>
@@ -94,7 +94,7 @@
         <ol class="kb-steps">
           <li data-i18n="kb.prowlarr.sections.addIndexer.steps.0">Open Prowlarr and go to Indexers.</li>
           <li data-i18n="kb.prowlarr.sections.addIndexer.steps.1">Click Add Indexer and choose the provider.</li>
-          <li data-i18n="kb.prowlarr.sections.addIndexer.steps.2">Paste the API key and base URL from the indexer.</li>
+          <li data-i18n="kb.prowlarr.sections.addIndexer.steps.2">Choose a base URL (prefer the ones labeled Public because they usually work right away).</li>
           <li data-i18n="kb.prowlarr.sections.addIndexer.steps.3">Click Test, then Save when it succeeds.</li>
         </ol>
         <div class="kb-media">
@@ -105,7 +105,7 @@
               data-i18n-alt="kb.prowlarr.images.addIndexerOne"
             />
             <figcaption class="kb-caption" data-i18n="kb.prowlarr.captions.addIndexerOne">
-              Add the indexer, paste the API key, then test.
+              Add the indexer, choose a Public base URL, then test.
             </figcaption>
           </figure>
           <figure>
@@ -129,7 +129,7 @@
         <ol class="kb-steps">
           <li data-i18n="kb.prowlarr.sections.troubleshoot.steps.0">If one indexer fails, switch the base URL and test again.</li>
           <li data-i18n="kb.prowlarr.sections.troubleshoot.steps.1">If it still fails, try a different indexer.</li>
-          <li data-i18n="kb.prowlarr.sections.troubleshoot.steps.2">If all indexers fail, check that your API key and credentials are correct.</li>
+          <li data-i18n="kb.prowlarr.sections.troubleshoot.steps.2">If all indexers fail, try another Public option or a different indexer.</li>
           <li data-i18n="kb.prowlarr.sections.troubleshoot.steps.3">Try again later in case the indexer is temporarily down.</li>
         </ol>
         <figure class="kb-media">

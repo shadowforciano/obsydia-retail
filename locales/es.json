@@ -217,7 +217,7 @@
       "sections": {
         "stack": {
           "title": "Resumen del stack",
-          "body": "Estas herramientas trabajan juntas para encontrar contenido y enviarlo a la app correcta."
+          "body": "Estas herramientas trabajan juntas para administrar su biblioteca y enviar b\u00fasquedas a la app correcta."
         },
         "addIndexer": {
           "title": "C\u00f3mo agregar indexers en Prowlarr",
@@ -246,16 +246,16 @@
           "body": "Fuente central de indexers para que Sonarr y Radarr puedan buscar y funcionar bien."
         },
         "sonarr": {
-          "title": "Sonarr (TV)",
-          "body": "Administra series y env\u00eda b\u00fasquedas a los indexers."
+          "title": "Sonarr (Automatizaci\u00f3n)",
+          "body": "Monitorea su biblioteca y env\u00eda b\u00fasquedas a los indexers."
         },
         "radarr": {
-          "title": "Radarr (Pel\u00edculas)",
-          "body": "Administra pel\u00edculas y env\u00eda b\u00fasquedas a los indexers."
+          "title": "Radarr (Automatizaci\u00f3n)",
+          "body": "Monitorea su biblioteca y env\u00eda b\u00fasquedas a los indexers."
         },
         "qbit": {
           "title": "qBittorrent",
-          "body": "Cliente de descargas que recibe archivos de Sonarr/Radarr."
+          "body": "Cliente de descargas que recibe archivos de apps conectadas."
         }
       },
       "images": {
